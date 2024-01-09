@@ -16,12 +16,8 @@ var usuarios = [
 var id = document.getElementById("identificador");
 var nombre = document.getElementById("nombre");
 
-
-var id = document.getElementById(identificador);
-var nombre = document.getElementById(nombre);
-
 function salir(){
-    if (id == 0) {
+    if (id.value == 0) {
         window.close();
         return;
     }
