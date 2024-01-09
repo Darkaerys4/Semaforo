@@ -16,7 +16,20 @@ var usuarios = [
 var id = document.getElementById("identificador");
 var nombre = document.getElementById("nombre");
 
+
+var id = document.getElementById(identificador);
+var nombre = document.getElementById(nombre);
+
+function salir(){
+    if (id == 0) {
+        window.close();
+        return;
+    }
+}
+
+
 //Parte que comprueba al usuario y el nombre
+
 function comprobarUsu() {
     var usuCorrecto = false;
     for (let i = 0; i < usuarios.length; i++) {
