@@ -1,3 +1,5 @@
+document.getElementById("div2").style.display = "none";
+
 //Array de usuarios
 var usuarios = [
     {
@@ -26,7 +28,8 @@ id.addEventListener("input", function () {
 /*Evento que se mantiene a la escucha que en caso de darle click al boton salir,
 sale de la aplicacion*/
 btnSalir.addEventListener("click", function () {
-    window.close();
+    document.getElementById("div1").style.display = "none";
+    document.getElementById("div2").style.display = "block";
 })
 
 //Parte que comprueba al usuario y el nombre
@@ -46,11 +49,31 @@ function comprobarUsu() {
     }
 }
 
-function pattern() {
-    if (/^[A-Z]\d{4}$/.test(id.value)) {
-        errorI.innerHTML = " ";
-    } else {
-        errorI.innerHTML = "!ERROR!,Identificador EJ: T1111";
-    }
+// function pattern() {
+//     if (/^[A-Z]\d{4}$/.test(id.value)) {
+//         errorI.innerHTML = " ";
+//     } else {
+//         errorI.innerHTML = "!ERROR!,Identificador EJ: T1111";
+//     }
 
-};
+// }
+
+function pattern(){
+    for (let i = 0; i < usuarios.length; i++) {
+        if (id != id.usuarios || nombre != nombre.usuarios) {
+            errorI.innerHTML = "!ERROR!,Identificador EJ: T1111";
+        }
+        else{
+            errorI.innerHTML = " ";
+        }
+    }
+}
+
+function salir(){
+    window.close();
+}
+
+function cancelar(){
+    document.getElementById("div1").style.display = "block";
+    document.getElementById("div2").style.display = "none";
+}
