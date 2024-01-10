@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+        .rojo {
+            background: red;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin: auto;
+        }
+
+        .ambar{
+            background: yellow;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin: auto;
+        }
+
+        .verde{
+            background: green;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin: auto;
+        }*/
+
+        .apagado{
+            background: gray;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin: auto;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div style="background-color: black; width: 150px; padding-top: 20px; padding-bottom: 20px;">
+        <div id="semaforo1">
+            <div class="apagado" id="l1"></div>
+            <br>
+            <div class="apagado" id="l2"></div>
+            <br>
+            <div class="apagado" id="l3"></div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <button id="start" onclick="start()">Start</button>
+    <button id="stop" onclick="stop()">Stop</button>
+
+    <script src="../js/Semaforo.js"></script>
+
+</body>
+
+</html>
