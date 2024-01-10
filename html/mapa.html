@@ -11,10 +11,36 @@
             position: absolute;        
         }
         .sema{
-            width: 30%;
-            height: 30%;
+            width: 15%;
+            height: 15%;
+        }
+        .peaton{
+            width: 100%;
+            height: 100%;
         }
     </style>
+    <script>
+        let nIntervId;
+        function start() {
+            var img = document.getElementById("peat");
+            img.src="../recursos/img/Peatonesverde.png"; 
+            if (!nIntervId) {                
+                nIntervId = setInterval(peaton, 3000);
+            }
+        }
+        function peaton(){
+            var img = document.getElementById("peat");
+            img.src="../recursos/img/Peatonesrojo.png";
+            stop();  
+            return false;
+        }
+
+        function stop() {            
+            clearInterval(nIntervId);            
+            nIntervId = null;
+        }
+    </script>
+    
 </head>
 <body>
     <!--calle principal-->
@@ -83,6 +109,12 @@
     <!--calle secundaria derecha fin-->
 
     <!--semaforo peaton-->
+    
+    <div style="position: absolute; margin-left: 0%; margin-top: 0%;">
+        <button style="width: 25%;" onclick="start();">
+            <img id="peat" src="..\recursos\img\Peatonesrojo.png" style="height: 100%; width: 100%;"/>
+        </button>        
+    </div>
     <!--semaforo peaton fin-->
 
 </body>
