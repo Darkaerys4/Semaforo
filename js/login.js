@@ -15,17 +15,21 @@ var usuarios = [
 ];
 var id = document.getElementById("identificador");
 var nombre = document.getElementById("nombre");
+var btnSalir = document.getElementById("btn-Salir");
+var errorI = document.getElementById("errorIdentificacion");
 
-function salir(){
-    if (id.value == 0) {
-        window.close();
-        return;
+id.addEventListener("input", function () {
+    if (id.value == "") {
+        errorI.innerHTML = "";
     }
-}
-
+});
+/*Evento que se mantiene a la escucha que en caso de darle click al boton salir,
+sale de la aplicacion*/
+btnSalir.addEventListener("click", function () {
+    window.close();
+})
 
 //Parte que comprueba al usuario y el nombre
-
 function comprobarUsu() {
     var usuCorrecto = false;
     for (let i = 0; i < usuarios.length; i++) {
@@ -38,5 +42,15 @@ function comprobarUsu() {
         console.log("Usuario loggeado");
     } else {
         console.log("usuario o indentificador incorrecto");
+        pattern();
     }
 }
+
+function pattern() {
+    if (/^[A-Z]\d{4}$/.test(id.value)) {
+        errorI.innerHTML = " ";
+    } else {
+        errorI.innerHTML = "!ERROR!,Identificador EJ: T1111";
+    }
+
+};

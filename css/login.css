@@ -1,6 +1,11 @@
-#div1{
+#div1 {
     width: 15%;
-    margin:auto;
+    margin: auto;
     margin-top: 150px;
     text-align: center;
+}
+
+#errorIdentificacion {
+    font-size: 12px;
+    color: red;
 }
