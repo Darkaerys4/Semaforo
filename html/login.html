@@ -12,14 +12,17 @@
 
     <form id="div1">
         <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Introduzca su identificación:</label>
+                <label for="exampleFormControlInput1" class="form-label" >Introduzca su identificación:</label>
                 <input type="text" class="form-control" id="identificador" placeholder="Identificación">
                 <input type="text" class="form-control" id="nombre" placeholder="Nombre">
         </div>
-        <span id="errorIdentificacion"></span>
+        <p id="errorIdentificacion"></p>
         <br>
-        <button type="button" class="btn btn-primary" onclick="comprobarUsu()">Ingresar</button>
-        <button type="button" class="btn btn-primary" id="btn-Salir">Salir</button>
+        <div class="btn-primary">
+            <button type="button" class="btn btn-primary" onclick="comprobarUsu()">Ingresar</button>
+            <button type="button" class="btn btn-primary" id="btn-Salir">Salir</button>
+        </div>
+        
     </form>
 
     <form id="div2">
