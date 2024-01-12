@@ -1,31 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/mapa.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .imagen{
-            width: 75%;
-            height: 97%;    
-            position: absolute;        
-        }
-        .sema{
-            width: 18%;
-            height: 18%;
-        }
-        .peaton{
-            width: 100%;
-            height: 100%;
-        }
-    </style>
     <script>
+        /*Zona1*/
         let nIntervId;
         let nIntervId2;
+        let nIntervId3;
+        let nIntervId4;
         function startZona1(){
             zona1_1();
             zonz1_2();
-        }
+            zona1_3();
+            zonz1_4();
+        }        
         function zona1_1() {
             var img = document.getElementById("peat");
             img.src="../recursos/img/Peatonesverde.png"; 
@@ -47,6 +40,7 @@
             nIntervId = null;;
             return false;
         }
+
         function peaton2(){
             var img = document.getElementById("peat2");
             img.src="../recursos/img/Peatonesrojo.png";
@@ -54,12 +48,105 @@
             nIntervId2 = null;
             return false;
         }
+        function zona1_3() {
+            var img = document.getElementById("peat1_3");
+            img.src="../recursos/img/Peatonesverde.png"; 
+            if (!nIntervId3) {                
+                nIntervId3 = setInterval(peaton1_3, 3000);
+            }
+        }
+        function zonz1_4() {
+            var img = document.getElementById("peat1_4");
+            img.src="../recursos/img/Peatonesverde.png"; 
+            if (!nIntervId4) {                
+                nIntervId4 = setInterval(peaton1_4, 3000);
+            }
+        }
 
-        function stop() {            
-            clearInterval(nIntervId);    
-            clearInterval(nIntervId2);        
-            nIntervId = null;
-            nIntervId2 = null;
+        function peaton1_3(){
+            var img = document.getElementById("peat1_3");
+            img.src="../recursos/img/Peatonesrojo.png";
+            clearInterval(nIntervId3);         
+            nIntervId3 = null;;
+            return false;
+        }
+        function peaton1_4(){
+            var img = document.getElementById("peat1_4");
+            img.src="../recursos/img/Peatonesrojo.png";
+            clearInterval(nIntervId4);        
+            nIntervId4 = null;
+            return false;
+        }
+
+        /*Zona2*/
+        let nIntervId2_1;
+        let nIntervId2_2;
+        let nIntervId2_3;
+        let nIntervId2_4;
+        function startZona2(){
+            zona2_1();
+            zonz2_2();
+            zona2_3();
+            zonz2_4();
+        }
+        function zona2_1() {
+            var img = document.getElementById("peat2_1");
+            img.src="../recursos/img/Peatonesverde.png"; 
+            if (!nIntervId2_1) {                
+                nIntervId2_1 = setInterval(peaton2_1, 3000);
+            }
+        }
+        function zonz2_2() {
+            var img = document.getElementById("peat2_2");
+            img.src="../recursos/img/Peatonesverde.png"; 
+            if (!nIntervId2_2) {                
+                nIntervId2_2 = setInterval(peaton2_2, 3000);
+            }
+        }
+
+        function peaton2_1(){
+            var img = document.getElementById("peat2_1");
+            img.src="../recursos/img/Peatonesrojo.png";
+            clearInterval(nIntervId2_1);         
+            nIntervId2_1 = null;
+            return false;
+        }
+        function peaton2_2(){
+            var img = document.getElementById("peat2_2");
+            img.src="../recursos/img/Peatonesrojo.png";
+            clearInterval(nIntervId2_2);        
+            nIntervId2_2 = null;
+            return false;
+        }
+
+        function zona2_3() {
+            var img = document.getElementById("peat2_3");
+            img.src="../recursos/img/Peatonesverde.png"; 
+            if (!nIntervId2_3) {                
+                nIntervId2_3 = setInterval(peaton2_3, 3000);
+            }
+        }
+        function zonz2_4() {
+            var img = document.getElementById("peat2_4");
+            img.src="../recursos/img/Peatonesverde.png"; 
+            if (!nIntervId2_4) {                
+                nIntervId2_4 = setInterval(peaton2_4, 3000);
+            }
+        }
+
+        function peaton2_3(){
+            var img = document.getElementById("peat2_3");
+            img.src="../recursos/img/Peatonesrojo.png";
+            clearInterval(nIntervId2_3);         
+            nIntervId2_3 = null;
+            return false;
+        }
+        function peaton2_4(){
+            var img = document.getElementById("peat2_4");
+            img.src="../recursos/img/Peatonesrojo.png";
+            clearInterval(nIntervId2_4);        
+            nIntervId2_4 = null;
+            return false;
         }
     </script>
     
@@ -69,80 +156,103 @@
     <div style="margin-left: 10%;">
         <img class="imagen" src="..\recursos\img\carretera.png">
     </div>
-    <div style="position: absolute; margin-left: 14.5%; margin-top: 9%;">
+    <div id="sema1_1">
         <img class="sema" src="..\recursos\img\semaforo.png">
     </div>
-    <div style="position: absolute; margin-left: 14.5%; margin-top: 28%;">
-        <img class="sema" src="..\recursos\img\semaforo.png">
-    </div>
-
-    <div style="position: absolute; margin-left: 39%; margin-top: 10%;">
-        <img class="sema" src="..\recursos\img\semaforo.png">
-    </div>
-    <div style="position: absolute; margin-left: 39%; margin-top: 28%;">
+    <div id="sema1_2">
         <img class="sema" src="..\recursos\img\semaforo.png">
     </div>
 
-    <div style="position: absolute; margin-left: 52.5%; margin-top: 10%;">
+    <div id="sema1_3">
         <img class="sema" src="..\recursos\img\semaforo.png">
     </div>
-    <div style="position: absolute; margin-left: 52.5%; margin-top: 28%;">
+    <div id="sema1_4">
         <img class="sema" src="..\recursos\img\semaforo.png">
     </div>
 
-    <div style="position: absolute; margin-left: 78%; margin-top: 10%;">
+    <div id="sema1_5">
         <img class="sema" src="..\recursos\img\semaforo.png">
     </div>
-    <div style="position: absolute; margin-left: 78%; margin-top: 28%;">
+    <div id="sema1_6">
+        <img class="sema" src="..\recursos\img\semaforo.png">
+    </div>
+
+    <div id="sema1_7">
+        <img class="sema" src="..\recursos\img\semaforo.png">
+    </div>
+    <div id="sema1_8">
         <img class="sema" src="..\recursos\img\semaforo.png">
     </div>
     <!--calle principal fin-->
 
     <!--calle secundaria izquierda-->
-    <div style="position: absolute; margin-left: 19%; margin-top: 2%;">
+    <div id="sema2_1">
         <img class="sema" src="..\recursos\img\semaforo.png">
     </div>
-    <div style="position: absolute; margin-left: 35%; margin-top: 2%;">
+    <div id="sema2_2">
         <img class="sema" src="..\recursos\img\semaforo.png">
     </div>
 
-    <div style="position: absolute; margin-left: 19%; margin-top: 35%;">
+    <div id="sema2_3">
         <img class="sema" src="..\recursos\img\semaforo.png">
     </div>
-    <div style="position: absolute; margin-left: 33.5%; margin-top: 35%;">
+    <div id="sema2_4">
         <img class="sema" src="..\recursos\img\semaforo.png">
     </div>
     <!--calle secundaria izquierda fin-->
 
     <!--calle secundaria derecha-->
-    <div style="position: absolute; margin-left: 58%; margin-top: 4%;">
+    <div id="sema3_1">
         <img class="sema" src="..\recursos\img\semaforo.png">
     </div>
-    <div style="position: absolute; margin-left: 72%; margin-top: 4%;">
+    <div id="sema3_2">
         <img class="sema" src="..\recursos\img\semaforo.png">
     </div>
 
-    <div style="position: absolute; margin-left: 58%; margin-top: 35%;">
+    <div id="sema3_3">
         <img class="sema" src="..\recursos\img\semaforo.png">
     </div>
-    <div style="position: absolute; margin-left: 72%; margin-top: 35%;">
+    <div id="sema3_4">
         <img class="sema" src="..\recursos\img\semaforo.png">
     </div>
     <!--calle secundaria derecha fin-->
 
     <!--semaforo peaton--> 
     <!--Zona1-->   
-    <div style="position: absolute; margin-left: 17%; margin-top: 5.5%;">
-        <button id="zona1-1"  style="width: 20%;" onclick="startZona1();">
-            <img id="peat" src="..\recursos\img\Peatonesrojo.png" style="height: 100%; width: 100%;"/>
-        </button>        
-    </div>
-    <div style="position: absolute; margin-left: 33%; margin-top: 5.5%;">
-        <button id="zona1-2" style="width: 20%;" onclick="startZona1();">
-            <img id="peat2" src="..\recursos\img\Peatonesrojo.png" style="height: 100%; width: 100%;"/>
-        </button>        
-    </div>
+    <button id="zona1_1"  onclick="startZona1();">
+        <img id="peat" src="..\recursos\img\Peatonesrojo.png"/>
+    </button>  
+    
+    <button id="zona1_2" onclick="startZona1();">
+        <img id="peat2" src="..\recursos\img\Peatonesrojo.png"/>
+    </button>        
+    
+    <button id="zona1_3"  onclick="startZona1();">
+        <img id="peat1_3" src="..\recursos\img\Peatonesrojo.png"/>
+    </button>        
+    
+    <button id="zona1_4" onclick="startZona1();">
+        <img id="peat1_4" src="..\recursos\img\Peatonesrojo.png"/>
+    </button>
     <!--Zona1-->
+
+    <!--Zona2-->    
+    <button id="zona2_1"  onclick="startZona2();">
+        <img id="peat2_1" src="..\recursos\img\Peatonesrojo.png"/>
+    </button>   
+
+    <button id="zona2_2"  onclick="startZona2();">
+        <img id="peat2_2" src="..\recursos\img\Peatonesrojo.png"/>
+    </button>        
+        
+    <button id="zona2_3"  onclick="startZona2();">
+        <img id="peat2_3" src="..\recursos\img\Peatonesrojo.png"/>
+    </button>        
+    
+    <button id="zona2_4" onclick="startZona2()">
+        <img id="peat2_4" src="..\recursos\img\Peatonesrojo.png"/>
+    </button> 
+    <!--Zona2-->
     <!--semaforo peaton fin-->
 
 </body>
