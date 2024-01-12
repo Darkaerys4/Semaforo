@@ -21,8 +21,14 @@ var btnSalir = document.getElementById("btn-Salir");
 var errorI = document.getElementById("errorIdentificacion");
 
 id.addEventListener("input", function () {
-    if (id.value == "") {
+    if (id.value == "" && nombre.value == "") {
         errorI.innerHTML = "";
+        id.style.borderColor = "";
+        nombre.style.borderColor = "";
+    } else if (id.value != "" && nombre.value != "") {
+        errorI.innerHTML = "";
+        id.style.borderColor = "";
+        nombre.style.borderColor = "";
     }
 });
 /*Evento que se mantiene a la escucha que en caso de darle click al boton salir,
@@ -49,31 +55,28 @@ function comprobarUsu() {
     }
 }
 
-// function pattern() {
-//     if (/^[A-Z]\d{4}$/.test(id.value)) {
-//         errorI.innerHTML = " ";
-//     } else {
-//         errorI.innerHTML = "!ERROR!,Identificador EJ: T1111";
-//     }
 
-// }
-
-function pattern(){
+function pattern() {
     for (let i = 0; i < usuarios.length; i++) {
-        if (id != id.usuarios || nombre != nombre.usuarios) {
-            errorI.innerHTML = "!ERROR!,Identificador EJ: T1111";
+        if (id.value == "" || nombre.value == "") {
+            errorI.innerHTML = "Por favor, ingrese algun dato";
+            id.style.borderColor = "red";
+            nombre.style.borderColor = "red";
         }
-        else{
-            errorI.innerHTML = " ";
+        else if (id.value != id.usuarios || nombre.value != nombre.usuarios) {
+            errorI.innerHTML = "!ERROR!,Identificador o nombre incorrecto";
+            id.style.borderColor = "red";
+            nombre.style.borderColor = "red";
         }
     }
 }
 
-function salir(){
+
+function salir() {
     window.close();
 }
 
-function cancelar(){
+function cancelar() {
     document.getElementById("div1").style.display = "block";
     document.getElementById("div2").style.display = "none";
 }
