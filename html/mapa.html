@@ -18,12 +18,11 @@
             zonz1_2();
             zona1_3();
             zonz1_4();
-        }        
-        function zona1_1() {
-            var img = document.getElementById("peat");
-            img.src="../recursos/img/Peatonesverde.png"; 
+        }     
+
+        function zona1_1() {         
             if (!nIntervId) {                
-                nIntervId = setInterval(peaton, 3000);
+                nIntervId = setInterval(peatonverde, 3000);
             }
         }
         function zonz1_2() {
@@ -33,11 +32,18 @@
                 nIntervId2 = setInterval(peaton2, 3000);
             }
         }
-        function peaton(){
+        function peatonverde(){
+            var img = document.getElementById("peat");
+            img.src="../recursos/img/Peatonesverde.png";
+            if (!nIntervId2) {                
+                nIntervId2 = setInterval(peatonrojo,3000);
+            }            
+        }
+        function peatonrojo(){
             var img = document.getElementById("peat");
             img.src="../recursos/img/Peatonesrojo.png";
             clearInterval(nIntervId);         
-            nIntervId = null;;
+            nIntervId = null;
             return false;
         }
         function peaton2(){
@@ -47,7 +53,7 @@
             nIntervId2 = null;
             return false;
         }
-        
+
         function zona1_3() {
             var img = document.getElementById("peat1_3");
             img.src="../recursos/img/Peatonesverde.png"; 
