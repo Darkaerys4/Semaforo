@@ -11,8 +11,8 @@
             position: absolute;        
         }
         .sema{
-            width: 15%;
-            height: 15%;
+            width: 18%;
+            height: 18%;
         }
         .peaton{
             width: 100%;
@@ -21,23 +21,45 @@
     </style>
     <script>
         let nIntervId;
-        function start() {
+        let nIntervId2;
+        function startZona1(){
+            zona1_1();
+            zonz1_2();
+        }
+        function zona1_1() {
             var img = document.getElementById("peat");
             img.src="../recursos/img/Peatonesverde.png"; 
             if (!nIntervId) {                
                 nIntervId = setInterval(peaton, 3000);
             }
         }
+        function zonz1_2() {
+            var img = document.getElementById("peat2");
+            img.src="../recursos/img/Peatonesverde.png"; 
+            if (!nIntervId2) {                
+                nIntervId2 = setInterval(peaton2, 3000);
+            }
+        }
         function peaton(){
             var img = document.getElementById("peat");
             img.src="../recursos/img/Peatonesrojo.png";
-            stop();  
+            clearInterval(nIntervId);         
+            nIntervId = null;;
+            return false;
+        }
+        function peaton2(){
+            var img = document.getElementById("peat2");
+            img.src="../recursos/img/Peatonesrojo.png";
+            clearInterval(nIntervId2);        
+            nIntervId2 = null;
             return false;
         }
 
         function stop() {            
-            clearInterval(nIntervId);            
+            clearInterval(nIntervId);    
+            clearInterval(nIntervId2);        
             nIntervId = null;
+            nIntervId2 = null;
         }
     </script>
     
@@ -47,7 +69,7 @@
     <div style="margin-left: 10%;">
         <img class="imagen" src="..\recursos\img\carretera.png">
     </div>
-    <div style="position: absolute; margin-left: 14.5%; margin-top: 10%;">
+    <div style="position: absolute; margin-left: 14.5%; margin-top: 9%;">
         <img class="sema" src="..\recursos\img\semaforo.png">
     </div>
     <div style="position: absolute; margin-left: 14.5%; margin-top: 28%;">
@@ -77,10 +99,10 @@
     <!--calle principal fin-->
 
     <!--calle secundaria izquierda-->
-    <div style="position: absolute; margin-left: 19%; margin-top: 4%;">
+    <div style="position: absolute; margin-left: 19%; margin-top: 2%;">
         <img class="sema" src="..\recursos\img\semaforo.png">
     </div>
-    <div style="position: absolute; margin-left: 33.5%; margin-top: 4%;">
+    <div style="position: absolute; margin-left: 35%; margin-top: 2%;">
         <img class="sema" src="..\recursos\img\semaforo.png">
     </div>
 
@@ -108,13 +130,19 @@
     </div>
     <!--calle secundaria derecha fin-->
 
-    <!--semaforo peaton-->
-    
-    <div style="position: absolute; margin-left: 0%; margin-top: 0%;">
-        <button style="width: 25%;" onclick="start();">
+    <!--semaforo peaton--> 
+    <!--Zona1-->   
+    <div style="position: absolute; margin-left: 17%; margin-top: 5.5%;">
+        <button id="zona1-1"  style="width: 20%;" onclick="startZona1();">
             <img id="peat" src="..\recursos\img\Peatonesrojo.png" style="height: 100%; width: 100%;"/>
         </button>        
     </div>
+    <div style="position: absolute; margin-left: 33%; margin-top: 5.5%;">
+        <button id="zona1-2" style="width: 20%;" onclick="startZona1();">
+            <img id="peat2" src="..\recursos\img\Peatonesrojo.png" style="height: 100%; width: 100%;"/>
+        </button>        
+    </div>
+    <!--Zona1-->
     <!--semaforo peaton fin-->
 
 </body>
