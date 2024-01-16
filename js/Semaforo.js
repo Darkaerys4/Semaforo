@@ -1,8 +1,12 @@
 $(document).ready(function(){
 
-    let con = $('#container');
+    let container = $('#contenedor-semaforo');
+
+    let semaforo
+
+
     
-    con.hide();
+    //con.hide();
 
     
 });

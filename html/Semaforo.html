@@ -6,81 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /*
-        .rojo {
-            background: red;
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-            margin: auto;
-        }
 
-        .ambar{
-            background: yellow;
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-            margin: auto;
-        }
-
-        .verde{
-            background: green;
+        /*.apagado{
+            background: gray;
             border-radius: 50%;
             width: 100px;
             height: 100px;
             margin: auto;
         }*/
 
-        .apagado{
-            background: gray;
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
+        #contenedor-semaforo{
+            width: 500px;
+            height: 400px;
+            background: rebeccapurple;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             margin: auto;
         }
 
-        #container{
+        #semaforo-img{
             width: 150px;
-            background: red;
-            position: relative;
-        }
-
-        #semaforoImg{
-            width: 150px;
-            position: relative;
-        }
-
-        #luz{
-            position: absolute;
-            background: gray;
-            border-radius: 50%;
-            width: 55px;
-            height: 55px;
-            top: 25%;
-            left: 48%;
-            transform: translate(-50%, -50%);
-        }
-
-        #luz2{
-            position: absolute;
-            background: gray;
-            border-radius: 50%;
-            width: 55px;
-            height: 55px;
-            top: 46%;
-            left: 48%;
-            transform: translate(-50%, -50%);
-        }
-
-        #luz3{
-            position: absolute;
-            background: gray;
-            border-radius: 50%;
-            width: 55px;
-            height: 55px;
-            top: 68%;
-            left: 48%;
-            transform: translate(-50%, -50%);
         }
         
 
@@ -90,6 +36,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
 </head>
+<!--
 
 <body>
     <div style="background-color: black; width: 150px; padding-top: 20px; padding-bottom: 20px;">
@@ -104,18 +51,18 @@
 
     <br>
     <br>
-
-    <button id="start" onclick="start()">Start</button>
-    <button id="stop" onclick="stop()">Stop</button>
+    -->
 
     <br><br>
 
-    <div id="container">
-        <img src="../recursos/img/semaforo.png" alt="" id="semaforoImg">
-        <div id="luz"></div>
-        <div id="luz2"></div>
-        <div id="luz3"></div>
+    <div id="contenedor-semaforo">
+        <div id="semaforo-coche">
+            <img src="../recursos/img/semaforojo.png" alt="" id="semaforo-img">
+        </div>
     </div>
+
+    <button id="start" onclick="start()">Start</button>
+    <button id="stop" onclick="stop()">Stop</button>
 
     <script src="../js/Semaforo.js"></script>
 
