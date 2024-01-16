@@ -7,154 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-        /*Zona1*/
-        let nIntervId;
-        let nIntervId2;
-        let nIntervId3;
-        let nIntervId4;
-        function startZona1(){
-            zona1_1();
-            zonz1_2();
-            zona1_3();
-            zonz1_4();
-        }     
-
-        function zona1_1() {         
-            if (!nIntervId) {                
-                nIntervId = setInterval(peatonverde, 3000);
-            }
-        }
-        function zonz1_2() {
-            var img = document.getElementById("peat2");
-            img.src="../recursos/img/Peatonesverde.png"; 
-            if (!nIntervId2) {                
-                nIntervId2 = setInterval(peaton2, 3000);
-            }
-        }
-        function peatonverde(){
-            var img = document.getElementById("peat");
-            img.src="../recursos/img/Peatonesverde.png";
-            if (!nIntervId) {                
-                nIntervId = setInterval(peatonrojo,3000);
-            }            
-        }
-        function peatonrojo(){
-            var img = document.getElementById("peat");
-            img.src="../recursos/img/Peatonesrojo.png";
-            clearInterval(nIntervId);         
-            nIntervId = null;
-            return false;
-        }
-        function peaton2(){
-            var img = document.getElementById("peat2");
-            img.src="../recursos/img/Peatonesrojo.png";
-            clearInterval(nIntervId2);        
-            nIntervId2 = null;
-            return false;
-        }
-
-        function zona1_3() {
-            var img = document.getElementById("peat1_3");
-            img.src="../recursos/img/Peatonesverde.png"; 
-            if (!nIntervId3) {                
-                nIntervId3 = setInterval(peaton1_3, 3000);
-            }
-        }
-        function zonz1_4() {
-            var img = document.getElementById("peat1_4");
-            img.src="../recursos/img/Peatonesverde.png"; 
-            if (!nIntervId4) {                
-                nIntervId4 = setInterval(peaton1_4, 3000);
-            }
-        }
-
-        function peaton1_3(){
-            var img = document.getElementById("peat1_3");
-            img.src="../recursos/img/Peatonesrojo.png";
-            clearInterval(nIntervId3);         
-            nIntervId3 = null;;
-            return false;
-        }
-        function peaton1_4(){
-            var img = document.getElementById("peat1_4");
-            img.src="../recursos/img/Peatonesrojo.png";
-            clearInterval(nIntervId4);        
-            nIntervId4 = null;
-            return false;
-        }
-
-        /*Zona2*/
-        let nIntervId2_1;
-        let nIntervId2_2;
-        let nIntervId2_3;
-        let nIntervId2_4;
-        function startZona2(){
-            zona2_1();
-            zonz2_2();
-            zona2_3();
-            zonz2_4();
-        }
-        function zona2_1() {
-            var img = document.getElementById("peat2_1");
-            img.src="../recursos/img/Peatonesverde.png"; 
-            if (!nIntervId2_1) {                
-                nIntervId2_1 = setInterval(peaton2_1, 3000);
-            }
-        }
-        function zonz2_2() {
-            var img = document.getElementById("peat2_2");
-            img.src="../recursos/img/Peatonesverde.png"; 
-            if (!nIntervId2_2) {                
-                nIntervId2_2 = setInterval(peaton2_2, 3000);
-            }
-        }
-
-        function peaton2_1(){
-            var img = document.getElementById("peat2_1");
-            img.src="../recursos/img/Peatonesrojo.png";
-            clearInterval(nIntervId2_1);         
-            nIntervId2_1 = null;
-            return false;
-        }
-        function peaton2_2(){
-            var img = document.getElementById("peat2_2");
-            img.src="../recursos/img/Peatonesrojo.png";
-            clearInterval(nIntervId2_2);        
-            nIntervId2_2 = null;
-            return false;
-        }
-
-        function zona2_3() {
-            var img = document.getElementById("peat2_3");
-            img.src="../recursos/img/Peatonesverde.png"; 
-            if (!nIntervId2_3) {                
-                nIntervId2_3 = setInterval(peaton2_3, 3000);
-            }
-        }
-        function zonz2_4() {
-            var img = document.getElementById("peat2_4");
-            img.src="../recursos/img/Peatonesverde.png"; 
-            if (!nIntervId2_4) {                
-                nIntervId2_4 = setInterval(peaton2_4, 3000);
-            }
-        }
-
-        function peaton2_3(){
-            var img = document.getElementById("peat2_3");
-            img.src="../recursos/img/Peatonesrojo.png";
-            clearInterval(nIntervId2_3);         
-            nIntervId2_3 = null;
-            return false;
-        }
-        function peaton2_4(){
-            var img = document.getElementById("peat2_4");
-            img.src="../recursos/img/Peatonesrojo.png";
-            clearInterval(nIntervId2_4);        
-            nIntervId2_4 = null;
-            return false;
-        }
-    </script>
+    <script src="../js/mapaScript.js"></script>
     
 </head>
 <body>
@@ -260,6 +113,60 @@
     </button> 
     <!--Zona2-->
     <!--semaforo peaton fin-->
+
+    <!--Temporizador-->
+    <div id="zonaCont1_1">
+    <span id="countdown"></span>
+    </div>    
+    <div id="zonaCont1_2">
+    <span id="countdown2"></span>
+    </div>
+    <div id="zonaCont1_3">
+    <span id="countdown3"></span>
+    </div>
+    <div id="zonaCont1_4">
+    <span id="countdown4"></span>
+    </div>
+
+    <div id="zonaCont1_1_2">
+    <span id="countdown_1"></span>
+    </div>    
+    <div id="zonaCont1_2_2">
+    <span id="countdown2_1"></span>
+    </div>
+    <div id="zonaCont1_3_2">
+    <span id="countdown3_1"></span>
+    </div>
+    <div id="zonaCont1_4_2">
+    <span id="countdown4_1"></span>
+    </div>
+
+    <div id="zonaCont1_1_3">
+    <span id="countdown_2"></span>
+    </div>    
+    <div id="zonaCont1_2_3">
+    <span id="countdown2_2"></span>
+    </div>
+    <div id="zonaCont1_3_3">
+    <span id="countdown3_2"></span>
+    </div>
+    <div id="zonaCont1_4_3">
+    <span id="countdown4_2"></span>
+    </div>
+
+    <div id="zonaCont1_1_4">
+    <span id="countdown_2_2"></span>
+    </div>    
+    <div id="zonaCont1_2_4">
+    <span id="countdown2_2_2"></span>
+    </div>
+    <div id="zonaCont1_3_4">
+    <span id="countdown3_2_2"></span>
+    </div>
+    <div id="zonaCont1_4_4">
+    <span id="countdown4_2_2"></span>
+    </div>
+    <!--Temporizador-->
 
 </body>
 </html>

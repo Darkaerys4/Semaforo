@@ -73,26 +73,80 @@ img{
 }
 /*Posiciones botones peatones*/
 #zona1_1{
-    position: absolute; margin-left: 17%; margin-top: 5.5%;
+    position: absolute; margin-left: 16%; margin-top: 5.5%;
 }
 #zona1_2{
-    position: absolute; margin-left: 33%; margin-top: 5.5%;
+    position: absolute; margin-left: 34%; margin-top: 5.5%;
 }
 #zona1_3{
-    position: absolute; margin-left: 17%; margin-top: 31.5%;
+    position: absolute; margin-left: 16%; margin-top: 31.5%;
 }
 #zona1_4{
-    position: absolute; margin-left: 33%; margin-top: 31.5%;
+    position: absolute; margin-left: 34%; margin-top: 31.5%;
 }
 #zona2_1{
-    position: absolute; margin-left: 55.5%; margin-top: 5.5%;
+    position: absolute; margin-left: 54.5%; margin-top: 5.5%;
 }
 #zona2_2{
-    position: absolute; margin-left: 72%; margin-top: 5.5%;
+    position: absolute; margin-left: 73%; margin-top: 5.5%;
 }
 #zona2_3{
-    position: absolute; margin-left: 55.5%; margin-top: 31.5%;
+    position: absolute; margin-left: 54.5%; margin-top: 31.5%;
 }
 #zona2_4{
+    position: absolute; margin-left: 73%; margin-top: 31.5%;
+}
+
+/*Posiciones contador peatones roja*/
+#zonaCont1_1{
+    position: absolute; margin-left: 22%; margin-top: 5.5%;
+}
+#zonaCont1_2{
+    position: absolute; margin-left: 40%; margin-top: 5.5%;
+}
+#zonaCont1_3{
+    position: absolute; margin-left: 22%; margin-top: 31.5%;
+}
+#zonaCont1_4{
+    position: absolute; margin-left: 40%; margin-top: 31.5%;
+}
+
+#zonaCont1_1_3{
+    position: absolute; margin-left: 61%; margin-top: 5.5%;
+}
+#zonaCont1_2_3{
+    position: absolute; margin-left: 79%; margin-top: 5.5%;
+}
+#zonaCont1_3_3{
+    position: absolute; margin-left: 61%; margin-top: 31.5%;
+}
+#zonaCont1_4_3{
+    position: absolute; margin-left: 79%; margin-top: 31.5%;
+}
+
+/*Posiciones contador peatones verde*/
+#zonaCont1_1_2{
+    position: absolute; margin-left: 15%; margin-top: 5.5%;
+}
+#zonaCont1_2_2{
+    position: absolute; margin-left: 33%; margin-top: 5.5%;
+}
+#zonaCont1_3_2{
+    position: absolute; margin-left: 15%; margin-top: 31.5%;
+}
+#zonaCont1_4_2{
+    position: absolute; margin-left: 33%; margin-top: 31.5%;
+}
+
+#zonaCont1_1_4{
+    position: absolute; margin-left: 53.5%; margin-top: 5.5%;
+}
+#zonaCont1_2_4{
+    position: absolute; margin-left: 72%; margin-top: 5.5%;
+}
+#zonaCont1_3_4{
+    position: absolute; margin-left: 53.5%; margin-top: 31.5%;
+}
+#zonaCont1_4_4{
     position: absolute; margin-left: 72%; margin-top: 31.5%;
 }
