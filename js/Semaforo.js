@@ -1,12 +1,80 @@
 $(document).ready(function(){
 
-    let container = $('#contenedor-semaforo');
+    let contenedorSemaforo = $('#contenedor-semaforo');
+    let semaforoCoche = $('#semaforo-img');
 
-    let semaforo
+    const ROJO_RUTA = '../recursos/img/semafororojo.png';
+    const AMBAR_RUTA = '../recursos/img/semaforoambar.png'; 
+    const VERDE_RUTA = '../recursos/img/semaforoverde.png';
+
+    let velocidad = 3000;
+    let ambar = false;
+
+    //BOTONES
+    let startBtn = $('#start-btn');
+    let stopBtn = $('#stop-btn');
+
+    let interval;
+
+
+    startBtn.on( 'click', function() {
+        start(true);
+    });
+
+    stopBtn.on( 'click', function() {
+        stop();
+    } );
+
+
+    //FUNCION QUE PASA DE VERDE - AMBAR - ROJO
+    function start(bool){
+        
+
+        //si bool  es TRUE --> [VERDE - AMBAR - ROJO]
+        if(bool){
+            //La imagen empieza en verde
+            semaforoCoche.attr('src', VERDE_RUTA);
+
+            //espera 3 segundos en verde
+            var activarSemaforo = function() {
+                console.log('loop')
+                let imagen = AMBAR_RUTA;
+                
+                if(!ambar){
+                    //pasa a ambar (1.5s)
+                    ambar = true;
+                    velocidad = 1500;
+                }else{
+                    //al ser rojo se BORRA el timeout
+                    imagen = ROJO_RUTA;
+                    activarSemaforo = null;
+                }
+    
+                semaforoCoche.attr('src', imagen);
+
+                setTimeout(activarSemaforo, velocidad);
+            }
+    
+            setTimeout(activarSemaforo, velocidad);
+        }else{
+            //si bool  es FALSE --> [ROJO - AMBAR - VERDE]
+        }
+
+    }
+
+
+    function stop() {
+       console.log('stop')
+    }
+
+
+
+
 
 
     
-    //con.hide();
+
+
 
     
 });
