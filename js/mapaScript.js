@@ -202,6 +202,7 @@ function peatonrojo2_4(){
     return false;
 }
 
+/*Temporizadores*/ 
 function updateClock() {  
   document.getElementById('countdown').innerHTML = totalTimeRojo;
   document.getElementById('countdown2').innerHTML = totalTimeRojo;
@@ -227,7 +228,7 @@ function updateClock2() {
       totalTimeRojo2-=1;
       setTimeout("updateClock2()",1000);
     }
-  }
+}
 
 function updateClockVerde() {  
     document.getElementById('countdown_1').innerHTML = totalTimeVerde;
