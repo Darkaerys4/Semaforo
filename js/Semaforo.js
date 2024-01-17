@@ -18,7 +18,7 @@ $(document).ready(function(){
 
 
     startBtn.on( 'click', function() {
-        start(true);
+        start(false);
     });
 
     stopBtn.on( 'click', function() {
@@ -26,17 +26,15 @@ $(document).ready(function(){
     } );
 
 
-    //FUNCION QUE PASA DE VERDE - AMBAR - ROJO
     function start(bool){
         
-
         //si bool  es TRUE --> [VERDE - AMBAR - ROJO]
         if(bool){
             //La imagen empieza en verde
             semaforoCoche.attr('src', VERDE_RUTA);
 
             //espera 3 segundos en verde
-            var activarSemaforo = function() {
+            let activarSemaforo = function() {
                 console.log('loop')
                 let imagen = AMBAR_RUTA;
                 
@@ -56,15 +54,39 @@ $(document).ready(function(){
             }
     
             setTimeout(activarSemaforo, velocidad);
+
         }else{
             //si bool  es FALSE --> [ROJO - AMBAR - VERDE]
+            semaforoCoche.attr('src', ROJO_RUTA);
+
+            let activarSemaforo = function() {
+                console.log('loopROJO')
+                let imagen = AMBAR_RUTA;
+                
+                if(!ambar){
+                    //pasa a ambar (1.5s)
+                    ambar = true;
+                    velocidad = 1500;
+                }else{
+                    //al ser verde se BORRA el timeout
+                    imagen = VERDE_RUTA;
+                    activarSemaforo = null;
+                }
+    
+                semaforoCoche.attr('src', imagen);
+
+                setTimeout(activarSemaforo, velocidad);
+            }
+
+            setTimeout(activarSemaforo, velocidad);
+
         }
 
     }
 
 
     function stop() {
-       console.log('stop')
+       console.log('STOP')
     }
 
 
