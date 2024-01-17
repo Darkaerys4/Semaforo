@@ -1,9 +1,58 @@
-#div1{
+#div1 {
+    width: 30%;
+    margin: auto;
+    margin-top: 130px;
+    text-align: center;
+    background: radial-gradient(circle 400px, rgba(255, 255, 255, 0.774) 1%, rgb(255, 255, 255) 70%);;
+    height: 50vh;
+    border-radius: 30px;
+}
+
+#div2 {
     width: 15%;
-    margin:auto;
+    margin: auto;
     margin-top: 150px;
     text-align: center;
 }
 
+#errorIdentificacion {
+    position: absolute;
+    font-size: 12px;
+    margin-left: 110px;
+    color: red;
+    height: 20px;
+    margin-top: -20px;
+}
 
+body {
+    background-image: radial-gradient(rgba(0, 0, 0, 0.089), rgba(20, 20, 20, 0.603)), url(../recursos/img/Login.jpg);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+
+}
+.mb-3{
+    position: relative;
+}
+
+.form-control {
+    background: transparent;
+    margin-top: 40px;
+    margin: 30px auto;
+    width: 80%;
+    border-color: black;
+}
+.form-label{
+    color: black;
+    margin-top: 30px;
+    position: relative;
+    font-size: 25px;
+    font-weight: bold;
+   
+}
+
+.btn-primary{
+    margin-top: -10px;
+
+}
 
