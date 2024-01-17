@@ -98,55 +98,55 @@ img{
 }
 
 /*Posiciones contador peatones roja*/
-#zonaCont1_1{
+#zonaCont1{
     position: absolute; margin-left: 22%; margin-top: 5.5%;
 }
-#zonaCont1_2{
+#zonaCont2{
     position: absolute; margin-left: 40%; margin-top: 5.5%;
 }
-#zonaCont1_3{
+#zonaCont3{
     position: absolute; margin-left: 22%; margin-top: 31.5%;
 }
-#zonaCont1_4{
+#zonaCont4{
     position: absolute; margin-left: 40%; margin-top: 31.5%;
 }
 
-#zonaCont1_1_3{
+#zonaCont1_1{
     position: absolute; margin-left: 61%; margin-top: 5.5%;
 }
-#zonaCont1_2_3{
+#zonaCont1_2{
     position: absolute; margin-left: 79%; margin-top: 5.5%;
 }
-#zonaCont1_3_3{
+#zonaCont1_3{
     position: absolute; margin-left: 61%; margin-top: 31.5%;
 }
-#zonaCont1_4_3{
+#zonaCont1_4{
     position: absolute; margin-left: 79%; margin-top: 31.5%;
 }
 
 /*Posiciones contador peatones verde*/
-#zonaCont1_1_2{
+#zonaCont2_1{
     position: absolute; margin-left: 15%; margin-top: 5.5%;
 }
-#zonaCont1_2_2{
+#zonaCont2_2{
     position: absolute; margin-left: 33%; margin-top: 5.5%;
 }
-#zonaCont1_3_2{
+#zonaCont2_3{
     position: absolute; margin-left: 15%; margin-top: 31.5%;
 }
-#zonaCont1_4_2{
+#zonaCont2_4{
     position: absolute; margin-left: 33%; margin-top: 31.5%;
 }
 
-#zonaCont1_1_4{
+#zonaCont2_2_1{
     position: absolute; margin-left: 53.5%; margin-top: 5.5%;
 }
-#zonaCont1_2_4{
+#zonaCont2_2_2{
     position: absolute; margin-left: 72%; margin-top: 5.5%;
 }
-#zonaCont1_3_4{
+#zonaCont2_2_3{
     position: absolute; margin-left: 53.5%; margin-top: 31.5%;
 }
-#zonaCont1_4_4{
+#zonaCont2_2_4{
     position: absolute; margin-left: 72%; margin-top: 31.5%;
 }

@@ -204,10 +204,10 @@ function peatonrojo2_4(){
 
 /*Temporizadores*/ 
 function updateClock() {  
-  document.getElementById('countdown').innerHTML = totalTimeRojo;
-  document.getElementById('countdown2').innerHTML = totalTimeRojo;
-  document.getElementById('countdown3').innerHTML = totalTimeRojo;
-  document.getElementById('countdown4').innerHTML = totalTimeRojo;
+  document.getElementById('countRojo1').innerHTML = totalTimeRojo;
+  document.getElementById('countRojo2').innerHTML = totalTimeRojo;
+  document.getElementById('countRojo3').innerHTML = totalTimeRojo;
+  document.getElementById('countRojo4').innerHTML = totalTimeRojo;
   if(totalTimeRojo==0){
     console.log('Final');
     totalTimeRojo = 3;
@@ -217,10 +217,10 @@ function updateClock() {
   }
 }
 function updateClock2() { 
-    document.getElementById('countdown_2').innerHTML = totalTimeRojo2;
-    document.getElementById('countdown2_2').innerHTML = totalTimeRojo2;
-    document.getElementById('countdown3_2').innerHTML = totalTimeRojo2;
-    document.getElementById('countdown4_2').innerHTML = totalTimeRojo2;
+    document.getElementById('countRojo2_1').innerHTML = totalTimeRojo2;
+    document.getElementById('countRojo2_2').innerHTML = totalTimeRojo2;
+    document.getElementById('countRojo2_3').innerHTML = totalTimeRojo2;
+    document.getElementById('countRojo2_4').innerHTML = totalTimeRojo2;
     if(totalTimeRojo2==0){
       console.log('Final');
       totalTimeRojo2 = 3;
@@ -231,10 +231,10 @@ function updateClock2() {
 }
 
 function updateClockVerde() {  
-    document.getElementById('countdown_1').innerHTML = totalTimeVerde;
-    document.getElementById('countdown2_1').innerHTML = totalTimeVerde;
-    document.getElementById('countdown3_1').innerHTML = totalTimeVerde;
-    document.getElementById('countdown4_1').innerHTML = totalTimeVerde;
+    document.getElementById('countVerde1').innerHTML = totalTimeVerde;
+    document.getElementById('countVerde2').innerHTML = totalTimeVerde;
+    document.getElementById('countVerde3').innerHTML = totalTimeVerde;
+    document.getElementById('countVerde4').innerHTML = totalTimeVerde;
     if(totalTimeVerde==0){
       console.log('Final');
       totalTimeVerde = 3;
@@ -244,10 +244,10 @@ function updateClockVerde() {
     }
 }
 function updateClockVerde2() {  
-  document.getElementById('countdown_2_2').innerHTML = totalTimeVerde2;
-  document.getElementById('countdown2_2_2').innerHTML = totalTimeVerde2;
-  document.getElementById('countdown3_2_2').innerHTML = totalTimeVerde2;
-  document.getElementById('countdown4_2_2').innerHTML = totalTimeVerde2;
+  document.getElementById('countVerde2_1').innerHTML = totalTimeVerde2;
+  document.getElementById('countVerde2_2').innerHTML = totalTimeVerde2;
+  document.getElementById('countVerde2_3').innerHTML = totalTimeVerde2;
+  document.getElementById('countVerde2_4').innerHTML = totalTimeVerde2;
     if(totalTimeVerde2==0){
       console.log('Final');
       totalTimeVerde2 = 3;
