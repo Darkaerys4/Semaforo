@@ -15,10 +15,13 @@ var usuarios = [
         nombre: "Junior"
     },
 ];
+
 var id = document.getElementById("identificador");
 var nombre = document.getElementById("nombre");
 var btnSalir = document.getElementById("btn-Salir");
 var errorI = document.getElementById("errorIdentificacion");
+
+
 
 
 //Parte que comprueba al usuario y el nombre
@@ -53,7 +56,14 @@ function pattern() {
         }
     }
 }
+id.addEventListener("input", function () {
+    if (id != " ") {
+        errorI.innerHTML = "";
+        id.style.borderColor = "none";
+        nombre.style.borderColor = "none";
+    }
 
+})
 $(document).ready(function () {
     $("#btn-Salir").click(function (e) {
         e.preventDefault();
@@ -73,32 +83,3 @@ $(document).ready(function () {
         window.close();
     });
 });
-
-
-//Parte de JavaScript
-/**
-id.addEventListener("input", function () {
-    if (id.value == "" && nombre.value == "") {
-        errorI.innerHTML = "";
-        id.style.borderColor = "";
-        nombre.style.borderColor = "";
-    } else if (id.value != "" && nombre.value != "") {
-        errorI.innerHTML = "";
-        id.style.borderColor = "";
-        nombre.style.borderColor = "";
-    }
-});
-
-btnSalir.addEventListener("click", function () {
-    document.getElementById("div1").style.display = "none";
-    document.getElementById("div2").style.display = "block";
-})
-
-// function salir() {
-//     window.close();
-// }
-
-function cancelar() {
-    document.getElementById("div1").style.display = "block";
-    document.getElementById("div2").style.display = "none";
-} */

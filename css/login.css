@@ -9,6 +9,19 @@
     border-radius: 30px;
 }
 
+
+.ident {
+    width: 40px;
+    position: absolute;
+    right: 50px;
+}
+.img-name{
+    width: 30px;
+    position: absolute;
+    margin:5px auto;
+    right: 50px;
+}
+
 #div2 {
     width: 15%;
     margin: auto;
@@ -30,8 +43,6 @@ body {
     background-size: cover;
     height: 100%;
     width: 100%;
-   
-
 }
 
 .mb-3 {
@@ -68,7 +79,9 @@ body {
     height: 50vh;
     border-radius: 30px;
 }
-
+#btnExit:hover{
+    background-color: red;
+}
 .mb-4 {
     position: absolute;
     margin: 8% auto;
