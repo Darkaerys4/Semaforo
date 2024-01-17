@@ -3,7 +3,8 @@
     margin: auto;
     margin-top: 130px;
     text-align: center;
-    background: radial-gradient(circle 400px, rgba(255, 255, 255, 0.774) 1%, rgb(255, 255, 255) 70%);;
+    background: radial-gradient(circle 400px, rgba(255, 255, 255, 0.5) 1%, rgb(255, 255, 255) 70%);
+    backdrop-filter: blur(10px);
     height: 50vh;
     border-radius: 30px;
 }
@@ -29,9 +30,11 @@ body {
     background-size: cover;
     height: 100%;
     width: 100%;
+   
 
 }
-.mb-3{
+
+.mb-3 {
     position: relative;
 }
 
@@ -42,16 +45,35 @@ body {
     width: 80%;
     border-color: black;
 }
-.form-label{
+
+.form-label {
     color: black;
     margin-top: 30px;
     position: relative;
     font-size: 25px;
     font-weight: bold;
-   
 }
 
-.btn-primary{
+.btn-primary {
     margin-top: -10px;
 
+}
+
+#div2 {
+    width: 30%;
+    margin: auto;
+    margin-top: 130px;
+    text-align: center;
+    background: radial-gradient(circle 400px, rgba(255, 255, 255, 0.774) 1%, rgb(255, 255, 255) 70%);
+    height: 50vh;
+    border-radius: 30px;
+}
+
+.mb-4 {
+    position: absolute;
+    margin: 8% auto;
+    margin-left: 120px;
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
 }

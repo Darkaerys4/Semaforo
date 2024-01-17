@@ -20,23 +20,6 @@ var nombre = document.getElementById("nombre");
 var btnSalir = document.getElementById("btn-Salir");
 var errorI = document.getElementById("errorIdentificacion");
 
-id.addEventListener("input", function () {
-    if (id.value == "" && nombre.value == "") {
-        errorI.innerHTML = "";
-        id.style.borderColor = "";
-        nombre.style.borderColor = "";
-    } else if (id.value != "" && nombre.value != "") {
-        errorI.innerHTML = "";
-        id.style.borderColor = "";
-        nombre.style.borderColor = "";
-    }
-});
-/*Evento que se mantiene a la escucha que en caso de darle click al boton salir,
-sale de la aplicacion*/
-btnSalir.addEventListener("click", function () {
-    document.getElementById("div1").style.display = "none";
-    document.getElementById("div2").style.display = "block";
-})
 
 //Parte que comprueba al usuario y el nombre
 function comprobarUsu() {
@@ -71,12 +54,51 @@ function pattern() {
     }
 }
 
+$(document).ready(function () {
+    $("#btn-Salir").click(function (e) {
+        e.preventDefault();
+        $("#div2").show(1000);
+        $("#div1").hide(400);
+    });
 
-function salir() {
-    window.close();
-}
+
+    $("#btnCancelar").click(function (e) {
+        e.preventDefault();
+        $("#div1").show(1000);
+        $("#div2").hide(400);
+    });
+
+    $("#btnExit").click(function (e) {
+        e.preventDefault();
+        window.close();
+    });
+});
+
+
+//Parte de JavaScript
+/**
+id.addEventListener("input", function () {
+    if (id.value == "" && nombre.value == "") {
+        errorI.innerHTML = "";
+        id.style.borderColor = "";
+        nombre.style.borderColor = "";
+    } else if (id.value != "" && nombre.value != "") {
+        errorI.innerHTML = "";
+        id.style.borderColor = "";
+        nombre.style.borderColor = "";
+    }
+});
+
+btnSalir.addEventListener("click", function () {
+    document.getElementById("div1").style.display = "none";
+    document.getElementById("div2").style.display = "block";
+})
+
+// function salir() {
+//     window.close();
+// }
 
 function cancelar() {
     document.getElementById("div1").style.display = "block";
     document.getElementById("div2").style.display = "none";
-}
+} */
