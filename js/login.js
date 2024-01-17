@@ -35,6 +35,7 @@ function comprobarUsu() {
     }
     if (usuCorrecto) {
         console.log("Usuario loggeado");
+        location.href = "mapa.html"
     } else {
         console.log("usuario o indentificador incorrecto");
         pattern();
