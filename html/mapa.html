@@ -7,7 +7,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-   
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     
 </head>
 <body>
@@ -16,33 +17,36 @@
         <img class="imagen" src="..\recursos\img\carretera.png">
     </div>
     <div id="sema1_1">
-        <img class="sema" src="..\recursos\img\semaforo.png">
+        <img class="sema" src="..\recursos\img\semaforoverde.png">
     </div>
     <div id="sema1_2">
-        <img class="sema" src="..\recursos\img\semaforo.png">
+        <img class="sema" src="..\recursos\img\semaforoverde.png">
     </div>
 
     <div id="sema1_3">
-        <img class="sema" src="..\recursos\img\semaforo.png">
+        <img class="sema" src="..\recursos\img\semaforoverde.png">
     </div>
     <div id="sema1_4">
-        <img class="sema" src="..\recursos\img\semaforo.png">
+        <img class="sema" src="..\recursos\img\semaforoverde.png">
     </div>
 
     <div id="sema1_5">
-        <img class="sema" src="..\recursos\img\semaforo.png">
+        <img class="sema" src="..\recursos\img\semaforoverde.png">
     </div>
     <div id="sema1_6">
-        <img class="sema" src="..\recursos\img\semaforo.png">
+        <img class="sema" src="..\recursos\img\semaforoverde.png">
     </div>
 
     <div id="sema1_7">
-        <img class="sema" src="..\recursos\img\semaforo.png">
+        <img class="sema" src="..\recursos\img\semaforoverde.png">
     </div>
     <div id="sema1_8">
-        <img class="sema" src="..\recursos\img\semaforo.png">
+        <img class="sema" src="..\recursos\img\semaforoverde.png">
     </div>
     <!--calle principal fin-->
+
+
+
 
     <!--calle secundaria izquierda-->
     <div id="sema2_1">
@@ -76,24 +80,32 @@
     </div>
     <!--calle secundaria derecha fin-->
 
+
+
+
+
     <!--semaforo peaton--> 
     <!--Zona1-->   
-    <button id="zona1_1"  onclick="startZona1();">
+    <button id="zona1_1" class="peaton-zona1">
         <img id="peat" src="..\recursos\img\Peatonesrojo.png"/>
-    </button>  
+    </button>
     
-    <button id="zona1_2" onclick="startZona1();">
+    <button id="zona1_2" class="peaton-zona1">
         <img id="peat2" src="..\recursos\img\Peatonesrojo.png"/>
-    </button>        
+    </button>
     
-    <button id="zona1_3"  onclick="startZona1();">
+    <button id="zona1_3" class="peaton-zona1">
         <img id="peat1_3" src="..\recursos\img\Peatonesrojo.png"/>
-    </button>        
+    </button>
     
-    <button id="zona1_4" onclick="startZona1();">
+    <button id="zona1_4" class="peaton-zona1" >
         <img id="peat1_4" src="..\recursos\img\Peatonesrojo.png"/>
     </button>
     <!--Zona1-->
+
+
+
+
 
     <!--Zona2-->    
     <button id="zona2_1"  onclick="startZona2();">
@@ -168,5 +180,6 @@
     </div>
     <!--Temporizador-->
     <script src="../js/mapaScript.js"></script>
+    <script src="../js/Semaforo.js"></script>
 </body>
 </html>
