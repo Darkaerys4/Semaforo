@@ -9,13 +9,56 @@ $(document).ready(function(){
     var totalTimeRojo2 = 3;
     var totalTimeVerde2 = 3;
 
+    const PEATON_ROJO = '../recursos/img/Peatonesrojo.png';
+    const PEATON_VERDE = '../recursos/img/Peatonesverde.png';
 
+    //funcion para controlar semaforos peatonales en ZONA 1
     $(".peaton-zona1").on("click", function() {
+
+        let peatonesLista = $('.peaton-semaforo');
+        let tiempoLabel = $('#countRojo1');
+
+        let tiempo = 2; //son 3 segundos lo q espera en rojo para pasar a verde
+
+        const timer = setInterval(function() {
+            tiempoLabel.text(tiempo);
+            tiempo--;
+            if (tiempo === -1) {
+                clearInterval(timer);
+                console.log("Time's up!");
+            }
+        }, 1000);
+
+
+        //cambia todos los semaforos a verde
+        peatonesLista.attr('src', PEATON_VERDE);
+
+
+        /*
         if (!nIntervId) {
             nIntervId = setInterval(peatonverde, 3000,updateClock());
         }
+        */
 
     });
+
+
+    function timerIniciar(){
+        console.log('ssss');
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     function startZona1(){    
         zona1_1();
