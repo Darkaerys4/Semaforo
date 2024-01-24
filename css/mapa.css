@@ -97,6 +97,10 @@ img{
     position: absolute; margin-left: 73%; margin-top: 31.5%;
 }
 
+#CambioNum{
+    position: absolute; margin-left: 95%; margin-top: 5.5%;
+}
+
 /*Posiciones contador peatones roja*/
 #zonaCont1{
     position: absolute; margin-left: 22%; margin-top: 5.5%;
