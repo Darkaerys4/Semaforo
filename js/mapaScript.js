@@ -1,46 +1,61 @@
 $(document).ready(function(){
     /*Zona1*/
-    let nIntervId;
-    let nIntervId2;
-    let nIntervId3;
-    let nIntervId4;
-    var totalTimeRojo = 3;
-    var totalTimeVerde = 3;
-    var totalTimeRojo2 = 3;
-    var totalTimeVerde2 = 3;
+    let timerVerde;
+    let tiempoLabelRojo = $('#countRojo1');
+    let tiempoLabelVerde = $('#countVerde1');
 
     const PEATON_ROJO = '../recursos/img/Peatonesrojo.png';
     const PEATON_VERDE = '../recursos/img/Peatonesverde.png';
 
+
+    //variables que controlan el tiempo
+    let tiempoRojo = 2; //son 3 segundos lo q espera en rojo para pasar a verde
+    let tiempoVerde = 2; //realemente son 3 segundos (+1)
+
     //funcion para controlar semaforos peatonales en ZONA 1
     $(".peaton-zona1").on("click", function() {
-
+        
+        tiempoLabelRojo.removeAttr('hidden');
         let peatonesLista = $('.peaton-semaforo');
-        let tiempoLabel = $('#countRojo1');
 
-        let tiempo = 2; //son 3 segundos lo q espera en rojo para pasar a verde
-
-        const timer = setInterval(function() {
-            tiempoLabel.text(tiempo);
-            tiempo--;
-            if (tiempo === -1) {
-                clearInterval(timer);
+        const timerRojo = setInterval(function() {
+            tiempoLabelRojo.text(tiempoRojo);
+            tiempoRojo--;
+            console.log('Segundos de rojo: '+ tiempoRojo)
+            if (tiempoRojo === -1) {
+                clearInterval(timerRojo);
+                //cambia todos los semaforos a verde
+                peatonesLista.attr('src', PEATON_VERDE);
                 console.log("Time's up!");
+                tiempoLabelRojo.hide();
+                tiempoLabelVerde.removeAttr('hidden');
+                nIntervId = setInterval(deVerdeARojo,1000);
             }
         }, 1000);
 
-
-        //cambia todos los semaforos a verde
-        peatonesLista.attr('src', PEATON_VERDE);
-
-
-        /*
-        if (!nIntervId) {
-            nIntervId = setInterval(peatonverde, 3000,updateClock());
-        }
-        */
+        
 
     });
+
+    function deVerdeARojo(){
+
+        tiempoLabelVerde--;
+        console.log('segundos de verde: '+ tiempoLabelVerde);
+
+        if (tiempoLabelVerde === -1) {
+            clearInterval(timerVerde);
+            //cambia todos los semaforos a rojo
+            peatonesLista.attr('src', PEATON_VERDE);
+            console.log("Time's up!");
+            tiempoLabelRojo.hide();
+            tiempoLabelVerde.removeAttr('hidden');
+            nIntervId2 = setInterval(deVerdeARojo,1000);
+        }
+    }
+
+
+
+
 
 
     function timerIniciar(){
@@ -58,7 +73,7 @@ $(document).ready(function(){
 
 
 
-
+/*
 
     function startZona1(){    
         zona1_1();
@@ -171,9 +186,9 @@ $(document).ready(function(){
 
 
 
+    /*
 
-
-    /*Zona2*/
+    //Zona2
     let nIntervId2_1;
     let nIntervId2_2;
     let nIntervId2_3;
@@ -273,7 +288,7 @@ $(document).ready(function(){
         return false;
     }
 
-    /*Temporizadores*/ 
+    //Temporizadores
     function updateClock() {  
         document.getElementById('countRojo1').innerHTML = totalTimeRojo;
         document.getElementById('countRojo2').innerHTML = totalTimeRojo;
@@ -328,5 +343,7 @@ $(document).ready(function(){
             setTimeout("updateClockVerde2()",1000);
         }
     }
+
+    */
 
 });
