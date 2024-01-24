@@ -1,6 +1,5 @@
 $(document).ready(function () {
     /*Zona1*/
-    let timerVerde;
     let tiempoLabelRojo = $('#countRojo1');
     let tiempoLabelVerde = $('#countVerde1');
 
@@ -10,14 +9,14 @@ $(document).ready(function () {
 
     //variables que controlan el tiempo
     let tiempoRojo = 2; //son 3 segundos lo q espera en rojo para pasar a verde
-    let tiempoVerde = 2; //realemente son 3 segundos (+1)
+    let tiempoVerde = 5; //realemente son 3 segundos (+1)
 
     //funcion para controlar semaforos peatonales en ZONA 1
-    $(".peaton-zona1").on("click", function () {
+    $('.peaton-zona1').on('click', function () {
 
         tiempoLabelRojo.removeAttr('hidden');
         tiempoLabelRojo.text(tiempoRojo+1);
-        console.log("Se muestra label rojo");
+        //console.log('Se muestra label rojo');
         let peatonesLista = $('.peaton-semaforo');
         
         const timerRojo = setInterval(function () {
@@ -26,11 +25,12 @@ $(document).ready(function () {
             // console.log('Segundos de rojo: ' + tiempoRojo)
             if (tiempoRojo === -1) {
                 clearInterval(timerRojo);
-                tiempoRojo=2;
+                tiempoRojo = 2;
+                tiempoVerde = 5;
                 //cambia todos los semaforos a verde
                 peatonesLista.attr('src', PEATON_VERDE);
-                // console.log("Time's up!");
-                tiempoLabelRojo.attr("hidden",true);
+                // console.log('Time's up!');
+                tiempoLabelRojo.attr('hidden',true);
                 tiempoLabelVerde.removeAttr('hidden');
                 tiempoLabelVerde.text(tiempoVerde+1);
                 nIntervId = setInterval(deVerdeARojo, 1000);
@@ -49,11 +49,29 @@ $(document).ready(function () {
             clearInterval(nIntervId);
             //cambia todos los semaforos a rojo
             peatonesLista.attr('src', PEATON_ROJO);
-            console.log("Tiempo verde!");
-            tiempoLabelVerde.attr("hidden",true);
+            //console.log('Tiempo verde!');
+            tiempoLabelVerde.attr('hidden',true);
            
         }
     }
+
+    /* 
+        HTML DE LA FUNCION DE ARRIBA
+
+        <button id="zona1_1" class="peaton-zona1">
+            <img id="peat1" src="..\recursos\img\Peatonesrojo.png" class="peaton-semaforo"/>
+        </button>
+
+        <div id="zonaCont1">
+            <span id="countRojo1" hidden>3</span>
+        </div>
+        <div id="zonaCont2_1">
+            <span id="countVerde1" hidden>3</span>
+        </div>
+    
+    
+    
+    */
 
 
 
@@ -109,8 +127,8 @@ $(document).ready(function () {
         }
     
         function peatonverde(){
-            var img = document.getElementById("peat");
-            img.src="../recursos/img/Peatonesverde.png";
+            var img = document.getElementById('peat');
+            img.src='../recursos/img/Peatonesverde.png';
             clearInterval(nIntervId);   
             nIntervId = null;    
             if (!nIntervId) {                
@@ -119,8 +137,8 @@ $(document).ready(function () {
         }
     
         function peaton2(){
-            var img = document.getElementById("peat2");
-            img.src="../recursos/img/Peatonesverde.png";
+            var img = document.getElementById('peat2');
+            img.src='../recursos/img/Peatonesverde.png';
             clearInterval(nIntervId2);        
             nIntervId2 = null;
             if (!nIntervId2) {                
@@ -130,8 +148,8 @@ $(document).ready(function () {
         }
     
         function peaton1_3(){
-            var img = document.getElementById("peat1_3");
-            img.src="../recursos/img/Peatonesverde.png";
+            var img = document.getElementById('peat1_3');
+            img.src='../recursos/img/Peatonesverde.png';
             clearInterval(nIntervId3);         
             nIntervId3 = null;
             if (!nIntervId3) {                
@@ -141,8 +159,8 @@ $(document).ready(function () {
         }
     
         function peaton1_4(){
-            var img = document.getElementById("peat1_4");
-            img.src="../recursos/img/Peatonesverde.png";
+            var img = document.getElementById('peat1_4');
+            img.src='../recursos/img/Peatonesverde.png';
             clearInterval(nIntervId4);        
             nIntervId4 = null;    
             if (!nIntervId4) {                
@@ -152,32 +170,32 @@ $(document).ready(function () {
         }
     
         function peatonrojo(){
-            var img = document.getElementById("peat");
-            img.src="../recursos/img/Peatonesrojo.png";
+            var img = document.getElementById('peat');
+            img.src='../recursos/img/Peatonesrojo.png';
             clearInterval(nIntervId);         
             nIntervId = null;
             return false;
         }
     
         function peatonrojo2(){
-            var img = document.getElementById("peat2");
-            img.src="../recursos/img/Peatonesrojo.png";
+            var img = document.getElementById('peat2');
+            img.src='../recursos/img/Peatonesrojo.png';
             clearInterval(nIntervId2);         
             nIntervId2 = null;
             return false;
         }
     
         function peatonrojo3(){
-            var img = document.getElementById("peat1_3");
-            img.src="../recursos/img/Peatonesrojo.png";
+            var img = document.getElementById('peat1_3');
+            img.src='../recursos/img/Peatonesrojo.png';
             clearInterval(nIntervId3);         
             nIntervId3 = null;
             return false;
         }
     
         function peatonrojo4(){
-            var img = document.getElementById("peat1_4");
-            img.src="../recursos/img/Peatonesrojo.png";
+            var img = document.getElementById('peat1_4');
+            img.src='../recursos/img/Peatonesrojo.png';
             clearInterval(nIntervId4);         
             nIntervId4 = null;
             return false;
@@ -222,8 +240,8 @@ $(document).ready(function () {
             }
         }
         function peaton2_1(){
-            var img = document.getElementById("peat2_1");
-            img.src="../recursos/img/Peatonesverde.png";
+            var img = document.getElementById('peat2_1');
+            img.src='../recursos/img/Peatonesverde.png';
             clearInterval(nIntervId2_1);         
             nIntervId2_1 = null;
             if (!nIntervId2_1) {                
@@ -232,8 +250,8 @@ $(document).ready(function () {
             return false;    
         }
         function peaton2_2(){
-            var img = document.getElementById("peat2_2");
-            img.src="../recursos/img/Peatonesverde.png";
+            var img = document.getElementById('peat2_2');
+            img.src='../recursos/img/Peatonesverde.png';
             clearInterval(nIntervId2_2);        
             nIntervId2_2 = null;
             if (!nIntervId2_2) {                
@@ -242,8 +260,8 @@ $(document).ready(function () {
             return false;
         }
         function peaton2_3(){
-            var img = document.getElementById("peat2_3");
-            img.src="../recursos/img/Peatonesverde.png";
+            var img = document.getElementById('peat2_3');
+            img.src='../recursos/img/Peatonesverde.png';
             clearInterval(nIntervId2_3);         
             nIntervId2_3 = null;
             if (!nIntervId2_3) {                
@@ -252,8 +270,8 @@ $(document).ready(function () {
             return false;
         }
         function peaton2_4(){
-            var img = document.getElementById("peat2_4");
-            img.src="../recursos/img/Peatonesverde.png";
+            var img = document.getElementById('peat2_4');
+            img.src='../recursos/img/Peatonesverde.png';
             clearInterval(nIntervId2_4);        
             nIntervId2_4 = null;
             if (!nIntervId2_4) {                
@@ -262,29 +280,29 @@ $(document).ready(function () {
             return false;
         }
         function peatonrojo2_1(){
-            var img = document.getElementById("peat2_1");
-            img.src="../recursos/img/Peatonesrojo.png";
+            var img = document.getElementById('peat2_1');
+            img.src='../recursos/img/Peatonesrojo.png';
             clearInterval(nIntervId2_1);         
             nIntervId2_1 = null;
             return false;
         }
         function peatonrojo2_2(){
-            var img = document.getElementById("peat2_2");
-            img.src="../recursos/img/Peatonesrojo.png";
+            var img = document.getElementById('peat2_2');
+            img.src='../recursos/img/Peatonesrojo.png';
             clearInterval(nIntervId2_2);         
             nIntervId2_2 = null;
             return false;
         }
         function peatonrojo2_3(){
-            var img = document.getElementById("peat2_3");
-            img.src="../recursos/img/Peatonesrojo.png";
+            var img = document.getElementById('peat2_3');
+            img.src='../recursos/img/Peatonesrojo.png';
             clearInterval(nIntervId2_3);         
             nIntervId2_3 = null;
             return false;
         }
         function peatonrojo2_4(){
-            var img = document.getElementById("peat2_4");
-            img.src="../recursos/img/Peatonesrojo.png";
+            var img = document.getElementById('peat2_4');
+            img.src='../recursos/img/Peatonesrojo.png';
             clearInterval(nIntervId2_4);         
             nIntervId2_4 = null;
             return false;
@@ -301,7 +319,7 @@ $(document).ready(function () {
                 totalTimeRojo = 3;
             }else{
                 totalTimeRojo-=1;
-                setTimeout("updateClock()",1000);
+                setTimeout('updateClock()',1000);
             }
         }
     
@@ -315,7 +333,7 @@ $(document).ready(function () {
             totalTimeRojo2 = 3;
             }else{
             totalTimeRojo2-=1;
-            setTimeout("updateClock2()",1000);
+            setTimeout('updateClock2()',1000);
             }
         }
     
@@ -329,7 +347,7 @@ $(document).ready(function () {
             totalTimeVerde = 3;
             }else{
                 totalTimeVerde-=1;
-                setTimeout("updateClockVerde()",1000);
+                setTimeout('updateClockVerde()',1000);
             }
         }
         function updateClockVerde2() {  
@@ -342,7 +360,7 @@ $(document).ready(function () {
             totalTimeVerde2 = 3;
             }else{
                 totalTimeVerde2-=1;
-                setTimeout("updateClockVerde2()",1000);
+                setTimeout('updateClockVerde2()',1000);
             }
         }
     
