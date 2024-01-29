@@ -1,3 +1,97 @@
+
+$(document).ready(function () {
+    /*Zona1*/
+    let tiempoLabelRojo = $('#countRojo1');
+    let tiempoLabelVerde = $('#countVerde1');
+
+    const PEATON_ROJO = '../recursos/img/Peatonesrojo.png';
+    const PEATON_VERDE = '../recursos/img/Peatonesverde.png';
+    //variable desactivar bloquea la posiblidad de activar el semaforo de nuevo 
+    let v = true;
+
+
+    //variables que controlan el tiempo
+    let tiempoRojo = 2; //son 3 segundos lo q espera en rojo para pasar a verde
+    let tiempoVerde = 5; //realemente son 3 segundos (+1)
+
+    //funcion para controlar semaforos peatonales en ZONA 1
+    $('.peaton-zona1').on('click', function () {
+
+        if(v == false){
+            console.log('NO PUEDES DARLE DE NUEVO')
+            return;
+        }
+
+        v = false;
+
+        tiempoLabelRojo.removeAttr('hidden');
+        tiempoLabelRojo.text(tiempoRojo+1);
+        //console.log('Se muestra label rojo');
+        let peatonesLista = $('.peaton-semaforo');
+        
+        const timerRojo = setInterval(function () {
+            tiempoLabelRojo.text(tiempoRojo);
+            tiempoRojo--;
+            console.log('Segundos de rojo: ' + tiempoRojo)
+            if (tiempoRojo === -1) {
+                clearInterval(timerRojo);
+                tiempoRojo = 2;
+                tiempoVerde = 5;
+                //cambia todos los semaforos a verde
+                peatonesLista.attr('src', PEATON_VERDE);
+                console.log('Time!!!');
+                tiempoLabelRojo.attr('hidden',true);
+                tiempoLabelVerde.removeAttr('hidden');
+                tiempoLabelVerde.text(tiempoVerde+1);
+                nIntervId = setInterval(deVerdeARojo, 1000);
+            }
+        }, 1000);
+    });
+
+    function deVerdeARojo() {
+        tiempoLabelVerde.removeAttr('hidden');
+        tiempoLabelVerde.text(tiempoVerde);
+        tiempoVerde--;
+        let peatonesLista = $('.peaton-semaforo');
+        console.log('segundos de verde: ' + tiempoVerde);
+        if (tiempoVerde === -1) {
+            tiempoVerde=2;
+            clearInterval(nIntervId);
+            //cambia todos los semaforos a rojo
+            peatonesLista.attr('src', PEATON_ROJO);
+            console.log('Tiempo verde!');
+            tiempoLabelVerde.attr('hidden',true);
+            v = true;
+           
+        }
+    }
+
+    /* 
+        HTML DE LA FUNCION DE ARRIBA
+
+        <button id="zona1_1" class="peaton-zona1">
+            <img id="peat1" src="..\recursos\img\Peatonesrojo.png" class="peaton-semaforo"/>
+        </button>
+
+        <div id="zonaCont1">
+            <span id="countRojo1" hidden>3</span>
+        </div>
+        <div id="zonaCont2_1">
+            <span id="countVerde1" hidden>3</span>
+        </div>
+    
+    
+    
+    */
+
+
+
+
+
+
+    function timerIniciar() {
+        console.log('ssss');
+=======
 /*Zona1*/
 let nIntervId;
 let nIntervId2;
@@ -255,4 +349,4 @@ function updateClockVerde2() {
         totalTimeVerde2 -= 1;
         setTimeout("updateClockVerde2()", 1000);
     }
-}
+});
