@@ -5,6 +5,8 @@ $(document).ready(function () {
 
     const PEATON_ROJO = '../recursos/img/Peatonesrojo.png';
     const PEATON_VERDE = '../recursos/img/Peatonesverde.png';
+    //variable desactivar bloquea la posiblidad de activar el semaforo de nuevo 
+    let v = true;
 
 
     //variables que controlan el tiempo
@@ -14,6 +16,13 @@ $(document).ready(function () {
     //funcion para controlar semaforos peatonales en ZONA 1
     $('.peaton-zona1').on('click', function () {
 
+        if(v == false){
+            console.log('NO PUEDES DARLE DE NUEVO')
+            return;
+        }
+
+        v = false;
+
         tiempoLabelRojo.removeAttr('hidden');
         tiempoLabelRojo.text(tiempoRojo+1);
         //console.log('Se muestra label rojo');
@@ -22,14 +31,14 @@ $(document).ready(function () {
         const timerRojo = setInterval(function () {
             tiempoLabelRojo.text(tiempoRojo);
             tiempoRojo--;
-            // console.log('Segundos de rojo: ' + tiempoRojo)
+            console.log('Segundos de rojo: ' + tiempoRojo)
             if (tiempoRojo === -1) {
                 clearInterval(timerRojo);
                 tiempoRojo = 2;
                 tiempoVerde = 5;
                 //cambia todos los semaforos a verde
                 peatonesLista.attr('src', PEATON_VERDE);
-                // console.log('Time's up!');
+                console.log('Time!!!');
                 tiempoLabelRojo.attr('hidden',true);
                 tiempoLabelVerde.removeAttr('hidden');
                 tiempoLabelVerde.text(tiempoVerde+1);
@@ -43,14 +52,15 @@ $(document).ready(function () {
         tiempoLabelVerde.text(tiempoVerde);
         tiempoVerde--;
         let peatonesLista = $('.peaton-semaforo');
-        // console.log('segundos de verde: ' + tiempoVerde);
+        console.log('segundos de verde: ' + tiempoVerde);
         if (tiempoVerde === -1) {
             tiempoVerde=2;
             clearInterval(nIntervId);
             //cambia todos los semaforos a rojo
             peatonesLista.attr('src', PEATON_ROJO);
-            //console.log('Tiempo verde!');
+            console.log('Tiempo verde!');
             tiempoLabelVerde.attr('hidden',true);
+            v = true;
            
         }
     }
