@@ -1,4 +1,5 @@
 document.getElementById("div2").style.display = "none";
+document.getElementById("h1").style.display = "none";
 
 //Array de usuarios
 var usuarios = [
@@ -23,7 +24,6 @@ $(document).ready(function () {
         $("#div1").hide(400);
     });
 
-
     $("#btnCancelar").click(function (e) {
         e.preventDefault();
         $("#div1").show(1000);
@@ -34,6 +34,11 @@ $(document).ready(function () {
         e.preventDefault();
         window.close();
     });
+
+    // $("#btn-Pruebas").click(function(e){
+    // $('#mapa.html').fadeIn(slow);
+    // $('#h1').fadeIn(1000);
+    // });
 
     var usuCorrecto = false;
     $("#btnIngresar").click(function (e) {
@@ -50,7 +55,7 @@ $(document).ready(function () {
         }
         if (usuCorrecto) {
             console.log("Usuario loggeado");
-            location.href = "mapa.html"
+            $(location).attr('href','mapa.html').fadeIn(5000);
         } else {
             $("#identificador").css("borderColor", "#ff0000");
             $("#nombre").css("borderColor", "#ff0000");
