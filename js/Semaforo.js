@@ -17,6 +17,7 @@ $(document).ready(function(){
 
     startBtn.on( 'click', function() {
         startSemaforoCoche(false);
+
     });
 
     stopBtn.on( 'click', function() {
