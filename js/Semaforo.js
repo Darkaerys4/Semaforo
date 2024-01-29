@@ -18,7 +18,7 @@ $(document).ready(function(){
 
 
     startBtn.on( 'click', function() {
-        start(false);
+        start(true);
     });
 
     stopBtn.on( 'click', function() {
