@@ -2,5 +2,63 @@
     width: 100%;
     height: 100%;
     margin: -0.6%;
-    position:fixed;
+    position:absolute;
+}
+
+#carretera1{
+    width: 2.5%;
+    position: absolute;
+    rotate: 90deg;
+    margin-top: 46.5vh;
+    margin-left: 23vh;
+}
+
+#carretera2{
+    width: 2.5%;
+    position: absolute;
+    rotate: 90deg;
+    margin-top: 46.5vh;
+    margin-left: 137vh;
+}
+
+#carretera3{
+    width: 2.5%;
+    position: absolute;
+    margin-top: 65vh;
+    margin-left: 171.5vh;
+}
+
+#carretera4{
+    width: 2.5%;
+    position: absolute;
+    margin-top: 65vh;
+    margin-left: 57vh;
+}
+
+#carretera5{
+    width: 2.5%;
+    position: absolute;
+    rotate: 180deg;
+    margin-top: 20vh;
+    margin-left: 45.5vh;
+}
+
+#carretera6{
+    width: 2.5%;
+    position: absolute;
+    rotate: 180deg;
+    margin-top: 20vh;
+    margin-left: 160.5vh;
+}
+
+#carretera7{
+    width: 2.5%;
+    position: absolute;
+    margin-left: 171.5vh;
+}
+
+#carretera8{
+    width: 2.5%;
+    position: absolute;
+    margin-left: 171.5vh;
 }
