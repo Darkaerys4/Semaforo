@@ -1,6 +1,6 @@
 
 $(document).ready(function () {
-
+    $(".aparicion").fadeIn(2000);
 
     /*Zona1*/
     let tiempoLabelRojo = $('#countRojo1');
@@ -67,7 +67,7 @@ $(document).ready(function () {
         }
     }
 });
-/* 
+/*
     HTML DE LA FUNCION DE ARRIBA
 
     <button id="zona1_1" class="peaton-zona1">
@@ -80,9 +80,9 @@ $(document).ready(function () {
     <div id="zonaCont2_1">
         <span id="countVerde1" hidden>3</span>
     </div>
- 
- 
- 
+
+
+
 */
 
 

@@ -55,7 +55,9 @@ $(document).ready(function () {
         }
         if (usuCorrecto) {
             console.log("Usuario loggeado");
-            $(location).attr('href','mapa.html').fadeIn(5000);
+            $("#div1").fadeOut(2000, function () {
+                location.href = "mapaANTIGUO.html";
+            });
         } else {
             $("#identificador").css("borderColor", "#ff0000");
             $("#nombre").css("borderColor", "#ff0000");
