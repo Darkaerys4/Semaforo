@@ -1,6 +1,6 @@
 
 $(document).ready(function () {
-    $(".aparicion").fadeIn(2000);
+    $(".aparicion").fadeIn(1500);
 
     /*Zona1*/
     let tiempoLabelRojo = $('#countRojo1');
