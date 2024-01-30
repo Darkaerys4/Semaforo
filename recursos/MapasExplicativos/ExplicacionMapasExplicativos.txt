@@ -1,0 +1,25 @@
+MapaExplicativo1:
+Tenemos la carretera principal, la que tendrá mayor tiempo de estar en verde, ya que en nuestra "simulación", es la 
+carretera con más tránsito. Esta carretera es atravesada por dos secundarias.
+MapaExplicativo2:
+Si la carretera principal esta en verde, las secundarias estarán cerradas, durante ese tiempo, los peatones
+podrán atravesar las carreteras secundarias.
+MapaExplicativo3:
+Cuando las carreteras secundarias estén en verde, la principal estara cerrada, y también podrán pasar los peatones.
+
+De forma natural, las carreteras irán cambiando de verde a rojo controlados por temporizadores.
+Que la carretera principal este verde, significa que los 4 pares de semaforos que formán la carretera estén verdes y
+los 4 pares de semáforos de peatones estén rojos, ádemas de que los dos pares de semáforos de cada calle
+secundaria estén rojos y los 2 pares de petones en verde.
+Que la carretera principal este roja, significa que los 4 pares de semaforos que formán la carretera estén rojos y
+los 4 pares de semáforos de peatones estén verdes, ádemas de que los dos pares de semáforos de cada calle
+secundaria estén verdes y los 2 pares de petones en rojo.
+
+MapaExplicativo4:
+Cuando un peatón, pulse un botón para cruzar una calle, abra un temporizador para que los coches puedan ir frenando
+ya que el semáforo se volvera ambar antes del rojo.
+Al tener dos cruces, los semáforos hay que tratarlos en pares, para que no haya ningún coche en medio de los cruces.
+Para eso si un peatón pulsa, por ejemplo, el botón izquierdo, del cruce izquierdo de la carretera principal, el cruce 
+derecho no se verá afectado y los dos semáforos de la carretera principal derecha se pondrán en rojo y los 
+peatones en verde. Durante el tiempo que puedan cruzar los peatones se puede habilitar la carretera secundaria
+de ese cruce.
