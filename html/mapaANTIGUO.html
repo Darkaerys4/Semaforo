@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/mapa.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAPA</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="shortcut icon" href="../recursos/img/semaforos.png" type="image/x-icon">
+</head>
+<body>
+    <!--calle principal-->
+    <div style="margin-left: 10%;">
+        <img class="imagen" src="..\recursos\img\carretera.png">
+    </div>
+    <div id="sema1_1">
+        <img class="sema" src="..\recursos\img\semaforoverde.png">
+    </div>
+    <div id="sema1_2">
+        <img class="sema" src="..\recursos\img\semaforoverde.png">
+    </div>
+
+    <div id="sema1_3">
+        <img class="sema" src="..\recursos\img\semaforoverde.png">
+    </div>
+    <div id="sema1_4">
+        <img class="sema" src="..\recursos\img\semaforoverde.png">
+    </div>
+
+    <div id="sema1_5">
+        <img class="sema" src="..\recursos\img\semaforoverde.png">
+    </div>
+    <div id="sema1_6">
+        <img class="sema" src="..\recursos\img\semaforoverde.png">
+    </div>
+
+    <div id="sema1_7">
+        <img class="sema" src="..\recursos\img\semaforoverde.png">
+    </div>
+    <div id="sema1_8">
+        <img class="sema" src="..\recursos\img\semaforoverde.png">
+    </div>
+    <!--calle principal fin-->
+
+
+
+
+    <!--calle secundaria izquierda-->
+    <div id="sema2_1">
+        <img class="sema" src="..\recursos\img\semaforo.png">
+    </div>
+    <div id="sema2_2">
+        <img class="sema" src="..\recursos\img\semaforo.png">
+    </div>
+
+    <div id="sema2_3">
+        <img class="sema" src="..\recursos\img\semaforo.png">
+    </div>
+    <div id="sema2_4">
+        <img class="sema" src="..\recursos\img\semaforo.png">
+    </div>
+    <!--calle secundaria izquierda fin-->
+
+    <!--calle secundaria derecha-->
+    <div id="sema3_1">
+        <img class="sema" src="..\recursos\img\semaforo.png">
+    </div>
+    <div id="sema3_2">
+        <img class="sema" src="..\recursos\img\semaforo.png">
+    </div>
+
+    <div id="sema3_3">
+        <img class="sema" src="..\recursos\img\semaforo.png">
+    </div>
+    <div id="sema3_4">
+        <img class="sema" src="..\recursos\img\semaforo.png">
+    </div>
+    <!--calle secundaria derecha fin-->
+
+
+
+
+
+    <!--semaforo peaton--> 
+    <!--Zona1-->
+    <button id="zona1_1" class="peaton-zona1">
+        <img id="peat1" src="..\recursos\img\Peatonesrojo.png" class="peaton-semaforo"/>
+    </button>
+
+
+    <button id="zona1" class="peaton-zona1">
+    </button>
+
+    <div id="zonaCont1">
+        <span id="countRojo1" hidden>3</span>
+    </div>
+    <div id="zonaCont2_1">
+        <span id="countVerde1" hidden>3</span>
+    </div>
+    
+
+
+
+
+    <button id="zona1_2" class="peaton-zona1">
+        <img id="peat2" src="..\recursos\img\Peatonesrojo.png" class="peaton-semaforo"/>
+    </button>
+    
+    <button id="zona1_3" class="peaton-zona1">
+        <img id="peat3" src="..\recursos\img\Peatonesrojo.png" class="peaton-semaforo"/>
+    </button>
+    
+    <button id="zona1_4" class="peaton-zona1">
+        <img id="peat4" src="..\recursos\img\Peatonesrojo.png" class="peaton-semaforo"/>
+    </button>
+    <!--Zona1-->
+
+
+
+
+
+    <!--Zona2-->    
+    <button id="zona2_1"  class="peaton-zona1">
+        <img id="peat2_1" src="..\recursos\img\Peatonesrojo.png"/>
+    </button>   
+
+    <button id="zona2_2"  class="peaton-zona1">
+        <img id="peat2_2" src="..\recursos\img\Peatonesrojo.png"/>
+    </button>        
+        
+    <button id="zona2_3"  class="peaton-zona1">
+        <img id="peat2_3" src="..\recursos\img\Peatonesrojo.png"/>
+    </button>        
+    
+    <button id="zona2_4" class="peaton-zona1">
+        <img id="peat2_4" src="..\recursos\img\Peatonesrojo.png"/>
+    </button> 
+    <!--Zona2-->
+    <!--semaforo peaton fin-->
+
+    <!--Temporizador-->
+
+    <div id="zonaCont2">
+    <span id="countRojo2"></span>
+    </div>
+    <div id="zonaCont3">
+    <span id="countRojo3"></span>
+    </div>
+    <div id="zonaCont4">
+    <span id="countRojo4"></span>
+    </div>
+
+    <div id="zonaCont1_1">
+    <span id="countRojo2_1"></span>
+    </div>    
+    <div id="zonaCont1_2">
+    <span id="countRojo2_2"></span>
+    </div>
+    <div id="zonaCont1_3">
+    <span id="countRojo2_3"></span>
+    </div>
+    <div id="zonaCont1_4">
+    <span id="countRojo2_4"></span>
+    </div>
+
+    <div id="zonaCont2_2">
+    <span id="countVerde2"></span>
+    </div>
+    <div id="zonaCont2_3">
+    <span id="countVerde3"></span>
+    </div>
+    <div id="zonaCont2_4">
+    <span id="countVerde4"></span>
+    </div>
+
+    <div id="zonaCont2_2_1">
+    <span id="countVerde2_1"></span>
+    </div>    
+    <div id="zonaCont2_2_2">
+    <span id="countVerde2_2"></span>
+    </div>
+    <div id="zonaCont2_2_3">
+    <span id="countVerde2_3"></span>
+    </div>
+    <div id="zonaCont2_2_4">
+    <span id="countVerde2_4"></span>
+    </div>
+    <!--Temporizador-->
+    <script src="../js/mapaScript.js"></script>
+    <script src="../js/Semaforo.js"></script>
+</body>
+</html>

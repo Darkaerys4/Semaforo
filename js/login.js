@@ -1,4 +1,5 @@
 document.getElementById("div2").style.display = "none";
+document.getElementById("h1").style.display = "none";
 
 //Array de usuarios
 var usuarios = [
@@ -16,62 +17,12 @@ var usuarios = [
     },
 ];
 
-var id = document.getElementById("identificador");
-var nombre = document.getElementById("nombre");
-var btnSalir = document.getElementById("btn-Salir");
-var errorI = document.getElementById("errorIdentificacion");
-
-
-
-
-//Parte que comprueba al usuario y el nombre
-function comprobarUsu() {
-    var usuCorrecto = false;
-    for (let i = 0; i < usuarios.length; i++) {
-        if (id.value == usuarios[i].id && nombre.value == usuarios[i].nombre) {
-            usuCorrecto = true;
-            break
-        }
-    }
-    if (usuCorrecto) {
-        console.log("Usuario loggeado");
-        location.href = "mapa.html"
-    } else {
-        console.log("usuario o indentificador incorrecto");
-        pattern();
-    }
-}
-
-
-function pattern() {
-    for (let i = 0; i < usuarios.length; i++) {
-        if (id.value == "" || nombre.value == "") {
-            errorI.innerHTML = "Por favor, ingrese algun dato";
-            id.style.borderColor = "red";
-            nombre.style.borderColor = "red";
-        }
-        else if (id.value != id.usuarios || nombre.value != nombre.usuarios) {
-            errorI.innerHTML = "!ERROR!,Identificador o nombre incorrecto";
-            id.style.borderColor = "red";
-            nombre.style.borderColor = "red";
-        }
-    }
-}
-id.addEventListener("input", function () {
-    if (id != " ") {
-        errorI.innerHTML = "";
-        id.style.borderColor = "none";
-        nombre.style.borderColor = "none";
-    }
-
-})
 $(document).ready(function () {
     $("#btn-Salir").click(function (e) {
         e.preventDefault();
         $("#div2").show(1000);
         $("#div1").hide(400);
     });
-
 
     $("#btnCancelar").click(function (e) {
         e.preventDefault();
@@ -82,5 +33,33 @@ $(document).ready(function () {
     $("#btnExit").click(function (e) {
         e.preventDefault();
         window.close();
+    });
+
+    // $("#btn-Pruebas").click(function(e){
+    // $('#mapa.html').fadeIn(slow);
+    // $('#h1').fadeIn(1000);
+    // });
+
+    var usuCorrecto = false;
+    $("#btnIngresar").click(function (e) {
+        if ($("#identificador").val().length < 1 || $("#nombre").val().length < 1) {
+            $("#identificador").css("borderColor", "#ff0000");
+            $("#nombre").css("borderColor", "#ff0000");
+            $('#errorIdentificacion').html("Por favor, ingrese algun dato ");
+        }
+        for (let i = 0; i < usuarios.length; i++) {
+            if ($("#identificador").val() == usuarios[i].id && $("#nombre").val() == usuarios[i].nombre) {
+                usuCorrecto = true;
+                break;
+            }
+        }
+        if (usuCorrecto) {
+            console.log("Usuario loggeado");
+            $(location).attr('href','mapa.html').fadeIn(5000);
+        } else {
+            $("#identificador").css("borderColor", "#ff0000");
+            $("#nombre").css("borderColor", "#ff0000");
+            $('#errorIdentificacion').html("Error usuario o contraseña erroneo");
+        }
     });
 });

@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/login.css">
-    <link rel="stylesheet" href="../css/mapa.css">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-   
-    
+    <link rel="stylesheet" href="../css/mapa.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
     <!--calle principal-->
@@ -74,100 +71,20 @@
     </div>
     <div id="sema3_4">
         <img id="semimg3_4" class="sema" src="..\recursos\img\semaforo.png">
-    </div>
-    <!--calle secundaria derecha fin-->
 
-    <!--semaforo peaton--> 
-    <!--Zona1-->   
-    <button id="zona1_1"  onclick="startZona1();">
-        <img id="peat" src="..\recursos\img\Peatonesrojo.png"/>
-    </button>  
+    <div id="bg-image">
+        <img id="image" src="../recursos/img/mapa_sin_flechas_dobles2.png"></img>
+
+        <div id="semaforos-carretera">
+            <img id="carretera1" src="../recursos/img/semaforoverde.png" alt="">
+            <img id="carretera2" src="../recursos/img/semaforoverde.png" alt="">
+            <img id="carretera3" src="../recursos/img/semafororojo.png" alt="">
+            <img id="carretera4" src="../recursos/img/semafororojo.png" alt="">
+            <img id="carretera5" src="../recursos/img/semafororojo.png" alt="">
+            <img id="carretera6" src="../recursos/img/semafororojo.png" alt="">
+            <img id="carretera7" src="../recursos/img/semafororojo.png" alt="">
+        </div>
+    </div>
     
-    <button id="zona1_2" onclick="startZona1();">
-        <img id="peat2" src="..\recursos\img\Peatonesrojo.png"/>
-    </button>        
-    
-    <button id="zona1_3"  onclick="startZona1();">
-        <img id="peat1_3" src="..\recursos\img\Peatonesrojo.png"/>
-    </button>        
-    
-    <button id="zona1_4" onclick="startZona1();">
-        <img id="peat1_4" src="..\recursos\img\Peatonesrojo.png"/>
-    </button>
-    <!--Zona1-->
-
-    <!--Zona2-->    
-    <button id="zona2_1"  onclick="startZona2();">
-        <img id="peat2_1" src="..\recursos\img\Peatonesrojo.png"/>
-    </button>   
-
-    <button id="zona2_2"  onclick="startZona2();">
-        <img id="peat2_2" src="..\recursos\img\Peatonesrojo.png"/>
-    </button>        
-        
-    <button id="zona2_3"  onclick="startZona2();">
-        <img id="peat2_3" src="..\recursos\img\Peatonesrojo.png"/>
-    </button>        
-    
-    <button id="zona2_4" onclick="startZona2()">
-        <img id="peat2_4" src="..\recursos\img\Peatonesrojo.png"/>
-    </button> 
-    <!--Zona2-->
-    <!--semaforo peaton fin-->
-
-    <!--Temporizador-->
-    <div id="zonaCont1">
-    <span id="countRojo1"></span>
-    </div>    
-    <div id="zonaCont2">
-    <span id="countRojo2"></span>
-    </div>
-    <div id="zonaCont3">
-    <span id="countRojo3"></span>
-    </div>
-    <div id="zonaCont4">
-    <span id="countRojo4"></span>
-    </div>
-
-    <div id="zonaCont1_1">
-    <span id="countRojo2_1"></span>
-    </div>    
-    <div id="zonaCont1_2">
-    <span id="countRojo2_2"></span>
-    </div>
-    <div id="zonaCont1_3">
-    <span id="countRojo2_3"></span>
-    </div>
-    <div id="zonaCont1_4">
-    <span id="countRojo2_4"></span>
-    </div>
-
-    <div id="zonaCont2_1">
-    <span id="countVerde1"></span>
-    </div>    
-    <div id="zonaCont2_2">
-    <span id="countVerde2"></span>
-    </div>
-    <div id="zonaCont2_3">
-    <span id="countVerde3"></span>
-    </div>
-    <div id="zonaCont2_4">
-    <span id="countVerde4"></span>
-    </div>
-
-    <div id="zonaCont2_2_1">
-    <span id="countVerde2_1"></span>
-    </div>    
-    <div id="zonaCont2_2_2">
-    <span id="countVerde2_2"></span>
-    </div>
-    <div id="zonaCont2_2_3">
-    <span id="countVerde2_3"></span>
-    </div>
-    <div id="zonaCont2_2_4">
-    <span id="countVerde2_4"></span>
-    </div>
-    <!--Temporizador-->
-    <script src="../js/mapaScript.js"></script>
 </body>
 </html>

@@ -1,152 +1,64 @@
-button{
-    width: 6%;
-    height: 6%;
-}
-img{
+#image{
     width: 100%;
     height: 100%;
-}
-.imagen{
-    width: 75%;
-    height: 97%;    
-    position: absolute;        
-}
-.sema{
-    width: 18%;
-    height: 18%;
-}
-/*Posiciones botones semáforos*/
-#sema1_1{
-    position: absolute; margin-left: 14.5%; margin-top: 9%;
-}
-#sema1_2{
-    position: absolute; margin-left: 14.5%; margin-top: 28%;
+    margin: -0.6%;
+    position:absolute;
 }
 
-#sema1_3{
-    position: absolute; margin-left: 39%; margin-top: 10%;
-}
-#sema1_4{
-    position: absolute; margin-left: 39%; margin-top: 28%;
-}
-
-#sema1_5{
-    position: absolute; margin-left: 52.5%; margin-top: 10%;
-}
-#sema1_6{
-    position: absolute; margin-left: 52.5%; margin-top: 28%;
+#carretera1{
+    width: 2.5%;
+    position: absolute;
+    rotate: 90deg;
+    margin-top: 46.5vh;
+    margin-left: 23vh;
 }
 
-#sema1_7{
-    position: absolute; margin-left: 78%; margin-top: 10%;
-}
-#sema1_8{
-    position: absolute; margin-left: 78%; margin-top: 28%;
-}
-
-#sema2_1{
-    position: absolute; margin-left: 19%; margin-top: 2%;
-}
-#sema2_2{
-    position: absolute; margin-left: 35%; margin-top: 2%;
+#carretera2{
+    width: 2.5%;
+    position: absolute;
+    rotate: 90deg;
+    margin-top: 46.5vh;
+    margin-left: 137vh;
 }
 
-#sema2_3{
-    position: absolute; margin-left: 19%; margin-top: 35%;
-}
-#sema2_4{
-    position: absolute; margin-left: 35%; margin-top: 35%;
-}
-
-#sema3_1{
-    position: absolute; margin-left: 57.5%; margin-top: 2%;
-}
-#sema3_2{
-    position: absolute; margin-left: 73.8%; margin-top: 2%;
+#carretera3{
+    width: 2.5%;
+    position: absolute;
+    margin-top: 65vh;
+    margin-left: 171.5vh;
 }
 
-#sema3_3{
-    position: absolute; margin-left: 57.5%; margin-top: 35%;
-}
-#sema3_4{
-    position: absolute; margin-left: 74%; margin-top: 35%;
-}
-/*Posiciones botones peatones*/
-#zona1_1{
-    position: absolute; margin-left: 16%; margin-top: 5.5%;
-}
-#zona1_2{
-    position: absolute; margin-left: 34%; margin-top: 5.5%;
-}
-#zona1_3{
-    position: absolute; margin-left: 16%; margin-top: 31.5%;
-}
-#zona1_4{
-    position: absolute; margin-left: 34%; margin-top: 31.5%;
-}
-#zona2_1{
-    position: absolute; margin-left: 54.5%; margin-top: 5.5%;
-}
-#zona2_2{
-    position: absolute; margin-left: 73%; margin-top: 5.5%;
-}
-#zona2_3{
-    position: absolute; margin-left: 54.5%; margin-top: 31.5%;
-}
-#zona2_4{
-    position: absolute; margin-left: 73%; margin-top: 31.5%;
+#carretera4{
+    width: 2.5%;
+    position: absolute;
+    margin-top: 65vh;
+    margin-left: 57vh;
 }
 
-/*Posiciones contador peatones roja*/
-#zonaCont1{
-    position: absolute; margin-left: 22%; margin-top: 5.5%;
-}
-#zonaCont2{
-    position: absolute; margin-left: 40%; margin-top: 5.5%;
-}
-#zonaCont3{
-    position: absolute; margin-left: 22%; margin-top: 31.5%;
-}
-#zonaCont4{
-    position: absolute; margin-left: 40%; margin-top: 31.5%;
+#carretera5{
+    width: 2.5%;
+    position: absolute;
+    rotate: 180deg;
+    margin-top: 20vh;
+    margin-left: 45.5vh;
 }
 
-#zonaCont1_1{
-    position: absolute; margin-left: 61%; margin-top: 5.5%;
-}
-#zonaCont1_2{
-    position: absolute; margin-left: 79%; margin-top: 5.5%;
-}
-#zonaCont1_3{
-    position: absolute; margin-left: 61%; margin-top: 31.5%;
-}
-#zonaCont1_4{
-    position: absolute; margin-left: 79%; margin-top: 31.5%;
+#carretera6{
+    width: 2.5%;
+    position: absolute;
+    rotate: 180deg;
+    margin-top: 20vh;
+    margin-left: 160.5vh;
 }
 
-/*Posiciones contador peatones verde*/
-#zonaCont2_1{
-    position: absolute; margin-left: 15%; margin-top: 5.5%;
-}
-#zonaCont2_2{
-    position: absolute; margin-left: 33%; margin-top: 5.5%;
-}
-#zonaCont2_3{
-    position: absolute; margin-left: 15%; margin-top: 31.5%;
-}
-#zonaCont2_4{
-    position: absolute; margin-left: 33%; margin-top: 31.5%;
+#carretera7{
+    width: 2.5%;
+    position: absolute;
+    margin-left: 171.5vh;
 }
 
-#zonaCont2_2_1{
-    position: absolute; margin-left: 53.5%; margin-top: 5.5%;
-}
-#zonaCont2_2_2{
-    position: absolute; margin-left: 72%; margin-top: 5.5%;
-}
-#zonaCont2_2_3{
-    position: absolute; margin-left: 53.5%; margin-top: 31.5%;
-}
-#zonaCont2_2_4{
-    position: absolute; margin-left: 72%; margin-top: 31.5%;
+#carretera8{
+    width: 2.5%;
+    position: absolute;
+    margin-left: 171.5vh;
 }
