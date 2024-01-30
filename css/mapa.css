@@ -9,56 +9,111 @@
     width: 2.5%;
     position: absolute;
     rotate: 90deg;
-    margin-top: 46.5vh;
-    margin-left: 23vh;
+    margin-top: 47.7vh;
+    margin-left: 18.5vh;
 }
 
 #carretera2{
     width: 2.5%;
     position: absolute;
     rotate: 90deg;
-    margin-top: 46.5vh;
-    margin-left: 137vh;
+    margin-top: 47.7vh;
+    margin-left: 133vh;
 }
 
 #carretera3{
     width: 2.5%;
     position: absolute;
-    margin-top: 65vh;
-    margin-left: 171.5vh;
+    margin-top: 72vh;
+    margin-left: 172.5vh;
 }
 
 #carretera4{
     width: 2.5%;
     position: absolute;
-    margin-top: 65vh;
-    margin-left: 57vh;
+    margin-top: 72vh;
+    margin-left: 57.5vh;
 }
 
 #carretera5{
     width: 2.5%;
     position: absolute;
     rotate: 180deg;
-    margin-top: 20vh;
-    margin-left: 45.5vh;
+    margin-top: 15.5vh;
+    margin-left: 46vh;
 }
 
 #carretera6{
     width: 2.5%;
     position: absolute;
     rotate: 180deg;
-    margin-top: 20vh;
-    margin-left: 160.5vh;
+    margin-top: 15.5vh;
+    margin-left: 161vh;
 }
 
 #carretera7{
     width: 2.5%;
     position: absolute;
-    margin-left: 171.5vh;
+    margin-left: 172vh;
 }
 
 #carretera8{
     width: 2.5%;
     position: absolute;
-    margin-left: 171.5vh;
+    margin-left: 57.5vh;
+}
+
+#carretera9{
+    width: 2.5%;
+    position: absolute;
+    rotate: 90deg;
+    margin-top: 47.7vh;
+    margin-left: 212vh;
+}
+
+#carretera10{
+    width: 2.5%;
+    position: absolute;
+    rotate: 270deg;
+    margin-top: 38.7vh;
+    margin-left: 202vh;
+}
+
+#carretera11{
+    width: 2.5%;
+    position: absolute;
+    rotate: 270deg;
+    margin-top: 38.7vh;
+    margin-left: 86vh;
+}
+
+#carretera12{
+    width: 2.5%;
+    position: absolute;
+    rotate: 270deg;
+    margin-top: 38.7vh;
+    margin-left: 5vh;
+}
+
+#carretera13{
+    width: 2.5%;
+    position: absolute;
+    rotate: 180deg;
+    margin-top: 86vh;
+    margin-left: 46.5vh;
+}
+
+#carretera14{
+    width: 2.5%;
+    position: absolute;
+    rotate: 180deg;
+    margin-top: 86vh;
+    margin-left: 161vh;
+}
+
+#btn-semaforo1{
+    position: absolute;
+    width: 25vh;
+    height: 25vh;
+    background-image: url("../recursos/img/Peatonesrojo.png");
 }
