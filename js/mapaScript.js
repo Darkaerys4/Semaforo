@@ -19,7 +19,7 @@ function startZona1(){
 }     
 
 $(document).ready(function () {
-
+    $(".aparicion").fadeIn(1500);
 
     /*Zona1*/
     let tiempoLabelRojo = $('#countRojo1');
@@ -170,7 +170,7 @@ function stop() {
 //Semaforos no principales
 =======
 });
-/* 
+/*
     HTML DE LA FUNCION DE ARRIBA
 
     <button id="zona1_1" class="peaton-zona1">
@@ -183,9 +183,9 @@ function stop() {
     <div id="zonaCont2_1">
         <span id="countVerde1" hidden>3</span>
     </div>
- 
- 
- 
+
+
+
 */
 
 
