@@ -110,3 +110,10 @@
     margin-top: 86vh;
     margin-left: 161vh;
 }
+
+#btn-semaforo1{
+    position: absolute;
+    width: 25vh;
+    height: 25vh;
+    background-image: url("../recursos/img/Peatonesrojo.png");
+}
