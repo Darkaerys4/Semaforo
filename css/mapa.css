@@ -113,7 +113,224 @@
 
 #btn-semaforo1{
     position: absolute;
-    width: 25vh;
-    height: 25vh;
-    background-image: url("../recursos/img/Peatonesrojo.png");
+    background: none;
+    border-color: transparent;
+    cursor: pointer;
+    margin-top: 40vh;
+    margin-left: 29vh;
+}
+
+#img-btn1{
+    width: 9vh;
+    height: 4.5vh;
+}
+
+#btn-semaforo2{
+    position: absolute;
+    background: none;
+    border-color: transparent;
+    cursor: pointer;
+    margin-top: 51.8vh;
+    margin-left: 29vh;
+}
+
+#img-btn2{
+    width: 9vh;
+    height: 4.5vh;
+}
+
+#btn-semaforo3{
+    position: absolute;
+    background: none;
+    border-color: transparent;
+    cursor: pointer;
+    margin-top: 40vh;
+    margin-left: 68.7vh;
+}
+
+#img-btn3{
+    width: 9vh;
+    height: 4.5vh;
+}
+
+#btn-semaforo4{
+    position: absolute;
+    background: none;
+    border-color: transparent;
+    cursor: pointer;
+    margin-top: 51.8vh;
+    margin-left: 68.7vh;
+}
+
+#img-btn4{
+    width: 9vh;
+    height: 4.5vh;
+}
+
+#btn-semaforo5{
+    position: absolute;
+    background: none;
+    border-color: transparent;
+    cursor: pointer;
+    margin-top: 40vh;
+    margin-left: 143.2vh;
+}
+
+#img-btn5{
+    width: 9vh;
+    height: 4.5vh;
+}
+
+#btn-semaforo6{
+    position: absolute;
+    background: none;
+    border-color: transparent;
+    cursor: pointer;
+    margin-top: 51.8vh;
+    margin-left: 143.2vh;
+}
+
+#img-btn6{
+    width: 9vh;
+    height: 4.5vh;
+}
+
+#btn-semaforo7{
+    position: absolute;
+    background: none;
+    border-color: transparent;
+    cursor: pointer;
+    margin-top: 40vh;
+    margin-left: 184.5vh;
+}
+
+#img-btn7{
+    width: 9vh;
+    height: 4.5vh;
+}
+
+#btn-semaforo8{
+    position: absolute;
+    background: none;
+    border-color: transparent;
+    cursor: pointer;
+    margin-top: 51.8vh;
+    margin-left: 184.5vh;
+}
+
+#img-btn8{
+    width: 9vh;
+    height: 4.5vh;
+}
+
+#btn-semaforo9{
+    position: absolute;
+    background: none;
+    border-color: transparent;
+    cursor: pointer;
+    margin-top: 27.5vh;
+    margin-left: 43vh;
+}
+
+#img-btn9{
+    width: 4.5vh;
+    height: 9vh;
+}
+
+#btn-semaforo10{
+    position: absolute;
+    background: none;
+    border-color: transparent;
+    cursor: pointer;
+    margin-top: 27.5vh;
+    margin-left: 59.1vh;
+}
+
+#img-btn10{
+    width: 4.5vh;
+    height: 9vh;
+}
+
+#btn-semaforo11{
+    position: absolute;
+    background: none;
+    border-color: transparent;
+    cursor: pointer;
+    margin-top: 60vh;
+    margin-left: 43vh;
+}
+
+#img-btn11{
+    width: 4.5vh;
+    height: 9vh;
+}
+
+#btn-semaforo12{
+    position: absolute;
+    background: none;
+    border-color: transparent;
+    cursor: pointer;
+    margin-top: 60vh;
+    margin-left: 59.1vh;
+}
+
+#img-btn12{
+    width: 4.5vh;
+    height: 9vh;
+}
+
+#btn-semaforo13{
+    position: absolute;
+    background: none;
+    border-color: transparent;
+    cursor: pointer;
+    margin-top: 27.5vh;
+    margin-left: 158vh;
+}
+
+#img-btn13{
+    width: 4.5vh;
+    height: 9vh;
+}
+
+#btn-semaforo14{
+    position: absolute;
+    background: none;
+    border-color: transparent;
+    cursor: pointer;
+    margin-top: 27.5vh;
+    margin-left: 173.5vh;
+}
+
+#img-btn14{
+    width: 4.5vh;
+    height: 9vh;
+}
+
+#btn-semaforo15{
+    position: absolute;
+    background: none;
+    border-color: transparent;
+    cursor: pointer;
+    margin-top: 60vh;
+    margin-left: 158vh;
+}
+
+#img-btn15{
+    width: 4.5vh;
+    height: 9vh;
+}
+
+#btn-semaforo16{
+    position: absolute;
+    background: none;
+    border-color: transparent;
+    cursor: pointer;
+    margin-top: 60vh;
+    margin-left: 173.5vh;
+}
+
+#img-btn16{
+    width: 4.5vh;
+    height: 9vh;
 }
