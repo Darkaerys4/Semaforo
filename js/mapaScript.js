@@ -56,7 +56,7 @@ $(document).ready(function () {
             console.log('Segundos de rojo: ' + tiempoRojo)
             if (tiempoRojo === -1) {
                 clearInterval(timerRojo);
-                tiempoRojo = 2;
+                tiempoRojo = 2; 
                 tiempoVerde = 5;
                 //cambia todos los semaforos a verde
                 peatonesLista.attr('src', PEATON_VERDE);
