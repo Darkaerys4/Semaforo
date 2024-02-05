@@ -117,7 +117,7 @@
     border-color: transparent;
     cursor: pointer;
     margin-top: 40vh;
-    margin-left: 29vh;
+    margin-left: 25.85vh;
 }
 
 #img-btn1{
@@ -131,7 +131,7 @@
     border-color: transparent;
     cursor: pointer;
     margin-top: 51.8vh;
-    margin-left: 29vh;
+    margin-left: 25.85vh;
 }
 
 #img-btn2{
@@ -145,7 +145,7 @@
     border-color: transparent;
     cursor: pointer;
     margin-top: 40vh;
-    margin-left: 68.7vh;
+    margin-left: 65.7vh;
 }
 
 #img-btn3{
@@ -159,7 +159,7 @@
     border-color: transparent;
     cursor: pointer;
     margin-top: 51.8vh;
-    margin-left: 68.7vh;
+    margin-left: 65.7vh;
 }
 
 #img-btn4{
@@ -173,7 +173,7 @@
     border-color: transparent;
     cursor: pointer;
     margin-top: 40vh;
-    margin-left: 143.2vh;
+    margin-left: 140.2vh;
 }
 
 #img-btn5{
@@ -187,7 +187,7 @@
     border-color: transparent;
     cursor: pointer;
     margin-top: 51.8vh;
-    margin-left: 143.2vh;
+    margin-left: 140.2vh;
 }
 
 #img-btn6{
@@ -201,7 +201,7 @@
     border-color: transparent;
     cursor: pointer;
     margin-top: 40vh;
-    margin-left: 184.5vh;
+    margin-left: 181.5vh;
 }
 
 #img-btn7{
@@ -215,7 +215,7 @@
     border-color: transparent;
     cursor: pointer;
     margin-top: 51.8vh;
-    margin-left: 184.5vh;
+    margin-left: 181.5vh;
 }
 
 #img-btn8{
@@ -229,7 +229,7 @@
     border-color: transparent;
     cursor: pointer;
     margin-top: 27.5vh;
-    margin-left: 43vh;
+    margin-left: 40vh;
 }
 
 #img-btn9{
@@ -243,7 +243,7 @@
     border-color: transparent;
     cursor: pointer;
     margin-top: 27.5vh;
-    margin-left: 59.1vh;
+    margin-left: 56.1vh;
 }
 
 #img-btn10{
@@ -257,7 +257,7 @@
     border-color: transparent;
     cursor: pointer;
     margin-top: 60vh;
-    margin-left: 43vh;
+    margin-left: 40vh;
 }
 
 #img-btn11{
@@ -271,7 +271,7 @@
     border-color: transparent;
     cursor: pointer;
     margin-top: 60vh;
-    margin-left: 59.1vh;
+    margin-left: 56.1vh;
 }
 
 #img-btn12{
@@ -285,7 +285,7 @@
     border-color: transparent;
     cursor: pointer;
     margin-top: 27.5vh;
-    margin-left: 158vh;
+    margin-left: 155vh;
 }
 
 #img-btn13{
@@ -299,7 +299,7 @@
     border-color: transparent;
     cursor: pointer;
     margin-top: 27.5vh;
-    margin-left: 173.5vh;
+    margin-left: 170.5vh;
 }
 
 #img-btn14{
@@ -313,7 +313,7 @@
     border-color: transparent;
     cursor: pointer;
     margin-top: 60vh;
-    margin-left: 158vh;
+    margin-left: 155vh;
 }
 
 #img-btn15{
@@ -327,7 +327,7 @@
     border-color: transparent;
     cursor: pointer;
     margin-top: 60vh;
-    margin-left: 173.5vh;
+    margin-left: 170.5vh;
 }
 
 #img-btn16{
@@ -335,3 +335,49 @@
     height: 9vh;
 }
 
+<<<<<<< HEAD
+=======
+.contador-verde-horizontal{
+    color: black;
+    vertical-align: 1vh;
+    font-size: medium;
+    background-color: rgb(0, 173, 0);
+    border-color: black;
+    padding: 0.5vh;
+    opacity: 0;
+    font-weight:bolder;
+}
+
+.contador-rojo-horizontal{
+    color: black;
+    vertical-align: 1vh;
+    font-size: medium;
+    background-color: rgb(197, 0, 0);
+    border-color: black;
+    padding: 0.5vh;
+    opacity: 0;
+    font-weight: bolder;
+}
+
+.contador-verde-vertical{
+    color: black;
+    vertical-align: 3.75vh;
+    font-size: medium;
+    background-color: rgb(0, 173, 0);
+    border-color: black;
+    padding: 0.5vh;
+    opacity: 0;
+    font-weight: bolder;
+}
+
+.contador-rojo-vertical{
+    color: black;
+    vertical-align: 3.75vh;
+    font-size: medium;
+    background-color: rgb(197, 0, 0);
+    border-color: black;
+    padding: 0.5vh;
+    opacity: 0;
+    font-weight: bolder;
+}
+>>>>>>> e68a7b355ca5a36d16bdc7870da933805bf3b14f
