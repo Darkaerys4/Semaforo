@@ -1,11 +1,11 @@
-#image{
+#image {
     width: 100%;
     height: 100%;
     margin: -0.6%;
-    position:absolute;
+    position: absolute;
 }
 
-#carretera1{
+#carretera1 {
     width: 2.5%;
     position: absolute;
     rotate: 90deg;
@@ -13,7 +13,7 @@
     margin-left: 18.5vh;
 }
 
-#carretera2{
+#carretera2 {
     width: 2.5%;
     position: absolute;
     rotate: 90deg;
@@ -21,21 +21,21 @@
     margin-left: 133vh;
 }
 
-#carretera3{
+#carretera3 {
     width: 2.5%;
     position: absolute;
     margin-top: 72vh;
     margin-left: 172.5vh;
 }
 
-#carretera4{
+#carretera4 {
     width: 2.5%;
     position: absolute;
     margin-top: 72vh;
     margin-left: 57.5vh;
 }
 
-#carretera5{
+#carretera5 {
     width: 2.5%;
     position: absolute;
     rotate: 180deg;
@@ -43,7 +43,7 @@
     margin-left: 46vh;
 }
 
-#carretera6{
+#carretera6 {
     width: 2.5%;
     position: absolute;
     rotate: 180deg;
@@ -51,7 +51,7 @@
     margin-left: 161vh;
 }
 
-#carretera7{
+#carretera7 {
     width: 2.5%;
     position: absolute;
     rotate: 180deg;
@@ -59,7 +59,7 @@
     margin-left: 172vh;
 }
 
-#carretera8{
+#carretera8 {
     width: 2.5%;
     position: absolute;
     rotate: 180deg;
@@ -67,7 +67,7 @@
     margin-left: 57.5vh;
 }
 
-#carretera9{
+#carretera9 {
     width: 2.5%;
     position: absolute;
     rotate: 90deg;
@@ -75,7 +75,7 @@
     margin-left: 212vh;
 }
 
-#carretera10{
+#carretera10 {
     width: 2.5%;
     position: absolute;
     rotate: 270deg;
@@ -83,7 +83,7 @@
     margin-left: 202vh;
 }
 
-#carretera11{
+#carretera11 {
     width: 2.5%;
     position: absolute;
     rotate: 270deg;
@@ -91,7 +91,7 @@
     margin-left: 86vh;
 }
 
-#carretera12{
+#carretera12 {
     width: 2.5%;
     position: absolute;
     rotate: 270deg;
@@ -99,49 +99,171 @@
     margin-left: 5vh;
 }
 
-#carretera13{
+#carretera13 {
     width: 2.5%;
     position: absolute;
     margin-top: 72vh;
     margin-left: 46.5vh;
 }
 
-#carretera14{
+#carretera14 {
     width: 2.5%;
     position: absolute;
     margin-top: 72vh;
     margin-left: 161vh;
 }
 
-#btn-semaforo1{
+
+/* Botones peatonales*/
+/* Contador del primer semaforo de la izquida */
+.Contador-Peatones-Iz-1 {
     position: absolute;
-    background: none;
-    border-color: transparent;
-    cursor: pointer;
-    margin-top: 40vh;
-    margin-left: 25.85vh;
+    margin: 37vh 11.9vw;
 }
 
-#img-btn1{
+.Contador-Peatones-Iz-1 button {
+    margin: 13px;
+    background: none;
+    border-color: transparent;
+}
+
+.Contador-Peatones-Iz-1 span {
+    position: relative;
+    margin-left: 30px;
+}
+
+/* Contador del segundo semaforo de la izquida */
+.Contador-Peatones-Iz-2 {
+    position: absolute;
+    margin: 37vh 29.65vw;
+}
+
+.Contador-Peatones-Iz-2 button {
+    margin: 13px;
+    background: none;
+    border-color: transparent;
+}
+
+.Contador-Peatones-Iz-2 span {
+    position: relative;
+    margin-left: 30px;
+}
+
+/* Contador del tercero semaforo de la izquida */
+.Contador-Peatones-Iz-3 {
+    position: absolute;
+    margin: 37vh 62.73vw;
+}
+
+.Contador-Peatones-Iz-3 button {
+    margin: 13px;
+    background: none;
+    border-color: transparent;
+}
+
+.Contador-Peatones-Iz-3 span {
+    position: relative;
+    margin-left: 30px;
+}
+
+/* Contador del cuarto semaforo de la izquida */
+.Contador-Peatones-Iz-4 {
+    position: absolute;
+    margin: 37vh 81vw;
+}
+
+.Contador-Peatones-Iz-4 button {
+    margin: 13px;
+    background: none;
+    border-color: transparent;
+}
+
+.Contador-Peatones-Iz-4 span {
+    position: relative;
+    margin-left: 30px;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/*Contador del primer semaforo de la izquierda de la parte de arriba */
+.Contador-Peatones-Iz-Ar-1 {
+    position: fixed;
+    display: flex;
+    margin: 22.5vh 16.7vw;
+}
+
+.Contador-Peatones-Iz-Ar-1 button {
+    margin: 30px;
+    background: none;
+    border-color: transparent;
+}
+.Contador-Peatones-Iz-Ar-1 span {
+    position: absolute;
+    margin-top: 50px;
+}
+/* Contador del segundo semaforo de la izquierda de la parte de arriba */
+.Contador-Peatones-Iz-Ar-2 {
+    position: fixed;
+    display: flex;
+    margin: 22.5vh 67.68vw;
+}
+
+.Contador-Peatones-Iz-Ar-2 button {
+    margin: 30px;
+    background: none;
+    border-color: transparent;
+}
+.Contador-Peatones-Iz-Ar-2 span {
+    position: absolute;
+    margin-top: 50px;
+}
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/*Contador del primer semaforo de la izquierda de la parte de abajo */
+.Contador-Peatones-Iz-Ab-1 {
+    position: fixed;
+    display: flex;
+    margin: 55vh 16.7vw;
+}
+
+.Contador-Peatones-Iz-Ab-1 button {
+    margin: 30px;
+    background: none;
+    border-color: transparent;
+}
+.Contador-Peatones-Iz-Ab-1 span {
+    position: absolute;
+    margin-top: 50px;
+}
+/*Contador del segundo semaforo de la izquierda de la parte de abajo */
+.Contador-Peatones-Iz-Ab-2 {
+    position: fixed;
+    display: flex;
+    margin: 55vh 67.68vw;
+}
+
+.Contador-Peatones-Iz-Ab-2 button {
+    margin: 30px;
+    background: none;
+    border-color: transparent;
+}
+.Contador-Peatones-Iz-Ab-2 span {
+    position: absolute;
+    margin-top: 50px;
+}
+
+
+
+
+
+
+
+.img-rojo {
     width: 9vh;
     height: 4.5vh;
 }
 
-#btn-semaforo2{
-    position: absolute;
-    background: none;
-    border-color: transparent;
-    cursor: pointer;
-    margin-top: 51.8vh;
-    margin-left: 25.85vh;
-}
 
-#img-btn2{
-    width: 9vh;
-    height: 4.5vh;
-}
-
-#btn-semaforo3{
+#btn-semaforo3 {
     position: absolute;
     background: none;
     border-color: transparent;
@@ -150,12 +272,9 @@
     margin-left: 65.7vh;
 }
 
-#img-btn3{
-    width: 9vh;
-    height: 4.5vh;
-}
 
-#btn-semaforo4{
+
+#btn-semaforo4 {
     position: absolute;
     background: none;
     border-color: transparent;
@@ -164,12 +283,8 @@
     margin-left: 65.7vh;
 }
 
-#img-btn4{
-    width: 9vh;
-    height: 4.5vh;
-}
 
-#btn-semaforo5{
+#btn-semaforo5 {
     position: absolute;
     background: none;
     border-color: transparent;
@@ -178,12 +293,12 @@
     margin-left: 140.2vh;
 }
 
-#img-btn5{
+#img-btn5 {
     width: 9vh;
     height: 4.5vh;
 }
 
-#btn-semaforo6{
+#btn-semaforo6 {
     position: absolute;
     background: none;
     border-color: transparent;
@@ -192,12 +307,12 @@
     margin-left: 140.2vh;
 }
 
-#img-btn6{
+#img-btn6 {
     width: 9vh;
     height: 4.5vh;
 }
 
-#btn-semaforo7{
+#btn-semaforo7 {
     position: absolute;
     background: none;
     border-color: transparent;
@@ -206,12 +321,12 @@
     margin-left: 181.5vh;
 }
 
-#img-btn7{
+#img-btn7 {
     width: 9vh;
     height: 4.5vh;
 }
 
-#btn-semaforo8{
+#btn-semaforo8 {
     position: absolute;
     background: none;
     border-color: transparent;
@@ -220,12 +335,12 @@
     margin-left: 181.5vh;
 }
 
-#img-btn8{
+#img-btn8 {
     width: 9vh;
     height: 4.5vh;
 }
 
-#btn-semaforo9{
+#btn-semaforo9 {
     position: absolute;
     background: none;
     border-color: transparent;
@@ -234,12 +349,12 @@
     margin-left: 40vh;
 }
 
-#img-btn9{
+#img-btn9 {
     width: 4.5vh;
     height: 9vh;
 }
 
-#btn-semaforo10{
+#btn-semaforo10 {
     position: absolute;
     background: none;
     border-color: transparent;
@@ -248,12 +363,12 @@
     margin-left: 56.1vh;
 }
 
-#img-btn10{
+#img-btn10 {
     width: 4.5vh;
     height: 9vh;
 }
 
-#btn-semaforo11{
+#btn-semaforo11 {
     position: absolute;
     background: none;
     border-color: transparent;
@@ -262,12 +377,12 @@
     margin-left: 40vh;
 }
 
-#img-btn11{
+#img-btn11 {
     width: 4.5vh;
     height: 9vh;
 }
 
-#btn-semaforo12{
+#btn-semaforo12 {
     position: absolute;
     background: none;
     border-color: transparent;
@@ -276,12 +391,12 @@
     margin-left: 56.1vh;
 }
 
-#img-btn12{
+#img-btn12 {
     width: 4.5vh;
     height: 9vh;
 }
 
-#btn-semaforo13{
+#btn-semaforo13 {
     position: absolute;
     background: none;
     border-color: transparent;
@@ -290,12 +405,12 @@
     margin-left: 155vh;
 }
 
-#img-btn13{
+#img-btn13 {
     width: 4.5vh;
     height: 9vh;
 }
 
-#btn-semaforo14{
+#btn-semaforo14 {
     position: absolute;
     background: none;
     border-color: transparent;
@@ -304,12 +419,12 @@
     margin-left: 170.5vh;
 }
 
-#img-btn14{
+#img-btn14 {
     width: 4.5vh;
     height: 9vh;
 }
 
-#btn-semaforo15{
+#btn-semaforo15 {
     position: absolute;
     background: none;
     border-color: transparent;
@@ -318,12 +433,12 @@
     margin-left: 155vh;
 }
 
-#img-btn15{
+#img-btn15 {
     width: 4.5vh;
     height: 9vh;
 }
 
-#btn-semaforo16{
+#btn-semaforo16 {
     position: absolute;
     background: none;
     border-color: transparent;
@@ -332,51 +447,7 @@
     margin-left: 170.5vh;
 }
 
-#img-btn16{
+#img-btn16 {
     width: 4.5vh;
     height: 9vh;
-}
-
-.contador-verde-horizontal{
-    color: black;
-    vertical-align: 1vh;
-    font-size: medium;
-    background-color: rgb(0, 173, 0);
-    border-color: black;
-    padding: 0.5vh;
-    opacity: 0;
-    font-weight:bolder;
-}
-
-.contador-rojo-horizontal{
-    color: black;
-    vertical-align: 1vh;
-    font-size: medium;
-    background-color: rgb(197, 0, 0);
-    border-color: black;
-    padding: 0.5vh;
-    opacity: 0;
-    font-weight: bolder;
-}
-
-.contador-verde-vertical{
-    color: black;
-    vertical-align: 3.75vh;
-    font-size: medium;
-    background-color: rgb(0, 173, 0);
-    border-color: black;
-    padding: 0.5vh;
-    opacity: 0;
-    font-weight: bolder;
-}
-
-.contador-rojo-vertical{
-    color: black;
-    vertical-align: 3.75vh;
-    font-size: medium;
-    background-color: rgb(197, 0, 0);
-    border-color: black;
-    padding: 0.5vh;
-    opacity: 0;
-    font-weight: bolder;
 }
