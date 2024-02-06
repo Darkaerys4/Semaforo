@@ -54,12 +54,16 @@
 #carretera7{
     width: 2.5%;
     position: absolute;
+    rotate: 180deg;
+    margin-top: 15.5vh;
     margin-left: 172vh;
 }
 
 #carretera8{
     width: 2.5%;
     position: absolute;
+    rotate: 180deg;
+    margin-top: 15.5vh;
     margin-left: 57.5vh;
 }
 
@@ -98,16 +102,14 @@
 #carretera13{
     width: 2.5%;
     position: absolute;
-    rotate: 180deg;
-    margin-top: 86vh;
+    margin-top: 72vh;
     margin-left: 46.5vh;
 }
 
 #carretera14{
     width: 2.5%;
     position: absolute;
-    rotate: 180deg;
-    margin-top: 86vh;
+    margin-top: 72vh;
     margin-left: 161vh;
 }
 
