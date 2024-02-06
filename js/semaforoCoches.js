@@ -59,7 +59,7 @@ $(document).ready(function(){
 
 
 
-
+/*
 
     function startSemaforoCoche(){
         
@@ -101,7 +101,7 @@ $(document).ready(function(){
         console.log('addas')
         clearInterval(intervaID);
 
-    }
+    }*/
 
 
 
