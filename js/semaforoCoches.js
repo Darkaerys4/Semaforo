@@ -4,8 +4,8 @@ $(document).ready(function(){
 
     //segSemaforoCoches determina el tiempo de los semaforos
     const TIEMPO_VERDE = 8;
-    const TIEMPO_AMBAR = 3;
-    const TIEMPO_AMBOS_ROJO = 3;
+    const TIEMPO_AMBAR = 1;
+    const TIEMPO_AMBOS_ROJO = 2;
 
     const ROJO_RUTA = '../recursos/img/semafororojo.png';
     const AMBAR_RUTA = '../recursos/img/semaforoambar.png'; 
