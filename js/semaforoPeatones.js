@@ -1,4 +1,20 @@
 $(document).ready(function () {
+    var pulsarBoton = false;
+    $(".btnIz-Peaton").click(function () {
+        if (!pulsarBoton) {
+            pulsarBoton = true;
+            var contador1 = 3;
+            $(".contador-verde-horizontal").text(contador1);
+            var intervalo1 = setInterval(() => {
+                contador1--;
+                $(".contador-verde-horizontal").text(contador1);
+                if (contador1 == 0) {
+                    clearInterval(intervalo1);
+                    controlPeatones("verde", "rojo")
+                }
+            }, 1000);
+        }
+    });
 
     let peatonesDerechaH = $('.peatones-derecha');
     let peatonesDerechaV = $('.peatones-derecha-vertical');
@@ -21,6 +37,4 @@ $(document).ready(function () {
             
         }, 1000);
         });
-
-        
 });

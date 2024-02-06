@@ -1,6 +1,25 @@
 
-$(document).ready(function () {
+/*Zona1*/
+let nIntervId;
+let nIntervId2;
+let nIntervId3;
+let nIntervId4;
+var totalTimeRojo = 3;
+var totalTimeVerde = 3;
+var totalTimeRojo2 = 3;
+var totalTimeVerde2 = 3;
+var bool = false;
+function startZona1() {
+    var bool = true;
+    zona1_1();
+    zonz1_2();
+    zona1_3();
+    zonz1_4();
+    start(bool);
+}
 
+$(document).ready(function () {
+    $(".aparicion").fadeIn(1500);
 
     /*Zona1*/
     let tiempoLabelRojo = $('#countRojo1');
@@ -37,7 +56,7 @@ $(document).ready(function () {
             console.log('Segundos de rojo: ' + tiempoRojo)
             if (tiempoRojo === -1) {
                 clearInterval(timerRojo);
-                tiempoRojo = 2;
+                tiempoRojo = 2; 
                 tiempoVerde = 5;
                 //cambia todos los semaforos a verde
                 peatonesLista.attr('src', PEATON_VERDE);
@@ -66,8 +85,94 @@ $(document).ready(function () {
             v = true;
         }
     }
+
+
+    //Semaforos no principales
+    const ROJO_RUTA = '../recursos/img/semafororojo.png';
+    const AMBAR_RUTA = '../recursos/img/semaforoambar.png';
+    const VERDE_RUTA = '../recursos/img/semaforoverde.png';
+
+    let velocidad = 3000;
+    let ambar = false;
+
+    //Semáforos izquierdos
+    let sema2_1 = $('#semimg2_1');
+    let sema2_2 = $('#semimg2_2');
+    let sema2_3 = $('#semimg2_3');
+    let sema2_4 = $('#semimg2_4');
+    //Semáforos derechos
+    let sema3_1 = $('#semimg3_1');
+    let sema3_2 = $('#semimg3_2');
+    let sema3_3 = $('#semimg3_3');
+    let sema3_4 = $('#semimg3_4');
+
+    let interval;
+
+    function start(bool) {
+
+        //si bool  es TRUE --> [VERDE - AMBAR - ROJO]
+        if (bool) {
+            //La imagen empieza en verde
+            sema2_1.attr('src', VERDE_RUTA);
+
+            //espera 3 segundos en verde
+            let activarSemaforo = function () {
+                console.log('loop')
+                let imagen = AMBAR_RUTA;
+
+                if (!ambar) {
+                    //pasa a ambar (1.5s)
+                    ambar = true;
+                    velocidad = 1500;
+                } else {
+                    //al ser rojo se BORRA el timeout
+                    imagen = ROJO_RUTA;
+                    activarSemaforo = null;
+                }
+
+                sema2_1.attr('src', imagen);
+
+                setTimeout(activarSemaforo, velocidad);
+            }
+
+            setTimeout(activarSemaforo, velocidad);
+
+        } else {
+            //si bool  es FALSE --> [ROJO - AMBAR - VERDE]
+            sema2_1.attr('src', ROJO_RUTA);
+
+            let activarSemaforo = function () {
+                console.log('loopROJO')
+                let imagen = AMBAR_RUTA;
+
+                if (!ambar) {
+                    //pasa a ambar (1.5s)
+                    ambar = true;
+                    velocidad = 1500;
+                } else {
+                    //al ser verde se BORRA el timeout
+                    imagen = VERDE_RUTA;
+                    activarSemaforo = null;
+                }
+
+                sema2_1.attr('src', imagen);
+
+                setTimeout(activarSemaforo, velocidad);
+            }
+            setTimeout(activarSemaforo, velocidad);
+        }
+    }
+    function stop() {
+        console.log('STOP')
+    }
+
 });
-/* 
+
+
+
+//Semaforos no principale
+
+/*
     HTML DE LA FUNCION DE ARRIBA
 
     <button id="zona1_1" class="peaton-zona1">
@@ -80,9 +185,7 @@ $(document).ready(function () {
     <div id="zonaCont2_1">
         <span id="countVerde1" hidden>3</span>
     </div>
- 
- 
- 
+
 */
 
 
