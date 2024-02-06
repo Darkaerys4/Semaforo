@@ -16,25 +16,23 @@ $(document).ready(function () {
         }
     });
 
-    let peatonesDerechaH = $('.peatones-derecha');
-    let peatonesDerechaV = $('.peatones-derecha-vertical');
-    let tmp = 0;
-    const PEATON_VERDE_HORIZONTAL = '../recursos/img/Peatonesverde.png';
-    const PEATON_VERDE_VERTICAL = '../recursos/img/PeatonesverdeVertical.png';
-    const PEATON_ROJO_HORIZONTAL = '../recursos/img/Peatonesrojo.png';
-    const PEATON_ROJO_VERTICAL = '../recursos/img/PeatonesrojoVertical.png';
-
-    $(peatonesDerechaH).click(function (e) {
-        setInterval(() => {
-            peatonesDerechaH.attr('src', PEATON_VERDE_HORIZONTAL);
-            peatonesDerechaV.attr('src', PEATON_ROJO_VERTICAL);
-            tmp++;
-            console.log(tmp);
-            if (tmp == 5) {
-                peatonesDerechaH.attr('src', PEATON_ROJO_HORIZONTAL);
-                peatonesDerechaV.attr('src', PEATON_VERDE_VERTICAL);
+    function controlPeatones(color1, color2) {
+        $(".img-rojo").attr("src", "../recursos/img/Peatones" + color1 + ".png");
+        $(".img-verde").attr("src", "../recursos/img/Peatones" + color2 + "Vertical.png");
+        var segundos = 3;
+        $(".contador-verde-horizontal").text(segundos);
+        intervalo2 = setInterval(function () {
+            segundos--;
+            $(".contador-verde-horizontal").text(segundos);
+            if (segundos == 0) {
+                clearInterval(intervalo2);
+                if (color1 == "verde" && color2 == "rojo") {
+                    pulsarBoton = false;
+                    controlPeatones("rojo", "verde")
+                    clearInterval(intervalo2);
+                    $(".contador-verde-horizontal").text(" ");
+                }
             }
-            
         }, 1000);
-        });
+    }
 });
