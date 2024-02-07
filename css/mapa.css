@@ -195,6 +195,7 @@
     margin: 30px;
     background: none;
     border-color: transparent;
+    
 }
 .Contador-Peatones-Iz-Ar-1 span {
     position: absolute;
@@ -261,6 +262,7 @@
 .img-rojo {
     width: 9vh;
     height: 4.5vh;
+    background-color: red;
 }
 
 
@@ -268,7 +270,7 @@
     position: absolute;
     background: none;
     border-color: transparent;
-    cursor: pointer;
+
     margin-top: 40vh;
     margin-left: 65.7vh;
 }
@@ -279,7 +281,7 @@
     position: absolute;
     background: none;
     border-color: transparent;
-    cursor: pointer;
+    
     margin-top: 51.8vh;
     margin-left: 65.7vh;
 }
@@ -289,7 +291,7 @@
     position: absolute;
     background: none;
     border-color: transparent;
-    cursor: pointer;
+    
     margin-top: 40vh;
     margin-left: 140.2vh;
 }
@@ -303,7 +305,7 @@
     position: absolute;
     background: none;
     border-color: transparent;
-    cursor: pointer;
+    
     margin-top: 51.8vh;
     margin-left: 140.2vh;
 }
@@ -317,7 +319,7 @@
     position: absolute;
     background: none;
     border-color: transparent;
-    cursor: pointer;
+    
     margin-top: 40vh;
     margin-left: 181.5vh;
 }
@@ -331,7 +333,7 @@
     position: absolute;
     background: none;
     border-color: transparent;
-    cursor: pointer;
+    
     margin-top: 51.8vh;
     margin-left: 181.5vh;
 }
@@ -345,7 +347,7 @@
     position: absolute;
     background: none;
     border-color: transparent;
-    cursor: pointer;
+    
     margin-top: 27.5vh;
     margin-left: 40vh;
 }
@@ -359,7 +361,7 @@
     position: absolute;
     background: none;
     border-color: transparent;
-    cursor: pointer;
+    
     margin-top: 27.5vh;
     margin-left: 56.1vh;
 }
@@ -373,7 +375,7 @@
     position: absolute;
     background: none;
     border-color: transparent;
-    cursor: pointer;
+    
     margin-top: 60vh;
     margin-left: 40vh;
 }
@@ -387,7 +389,7 @@
     position: absolute;
     background: none;
     border-color: transparent;
-    cursor: pointer;
+    
     margin-top: 60vh;
     margin-left: 56.1vh;
 }
@@ -401,7 +403,7 @@
     position: absolute;
     background: none;
     border-color: transparent;
-    cursor: pointer;
+    
     margin-top: 27.5vh;
     margin-left: 155vh;
 }
@@ -415,7 +417,7 @@
     position: absolute;
     background: none;
     border-color: transparent;
-    cursor: pointer;
+    
     margin-top: 27.5vh;
     margin-left: 170.5vh;
 }
@@ -429,7 +431,7 @@
     position: absolute;
     background: none;
     border-color: transparent;
-    cursor: pointer;
+    
     margin-top: 60vh;
     margin-left: 155vh;
 }
@@ -443,7 +445,7 @@
     position: absolute;
     background: none;
     border-color: transparent;
-    cursor: pointer;
+    
     margin-top: 60vh;
     margin-left: 170.5vh;
 }
@@ -451,4 +453,8 @@
 #img-btn16 {
     width: 4.5vh;
     height: 9vh;
+}
+
+button{
+    cursor: pointer;
 }
