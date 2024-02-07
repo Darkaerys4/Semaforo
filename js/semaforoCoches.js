@@ -1,5 +1,65 @@
 $(document).ready(function(){
+    
+    let btnIz_peatonIz = $('.btnIz-Peaton-Iz-1');
+    let cont_iz = $('#cont-p-iz-iz');
 
+
+    let intervalId;
+
+    const ESPERA_ROJO_P = 3;
+    const ESPERA_VERDE_P = 6;
+
+    let tiempoGeneral = 0;
+    let labelPeaton = ESPERA_ROJO_P;
+    let presionado = false;
+
+    const ROJO_HORIZ_P = '../recursos/img/Peatonesrojo.png';
+    const VERDE_HORIZ_P = '../recursos/img/Peatonesverde.png';
+
+    const ROJO_VERT_P = '../recursos/img/PeatonesrojoVertical.png';
+    const VERDE_VERT_P = '../recursos/img/PeatonesverdeVertical.png';
+
+    btnIz_peatonIz.on( 'click', function() {
+        console.log('BOTON PRESIONADO')
+
+        if(presionado){
+            console.log('NO PUDES PRESIONARLO OTRA VEZ')
+            return;
+        }
+        cont_iz.text(ESPERA_ROJO_P);
+        presionado = true;
+        intervalId = setInterval(iniciarPeatones,1000);
+
+    });
+
+
+    function iniciarPeatones() {
+
+        tiempoGeneral++;
+        console.log(tiempoGeneral);
+        labelPeaton--;
+        cont_iz.text(labelPeaton);
+        
+        if(tiempoGeneral == ESPERA_ROJO_P){
+            cont_iz.text(ESPERA_VERDE_P);
+            labelPeaton = ESPERA_VERDE_P;
+            console.log('pasar a verde');
+            $(btnIz_peatonIz).children('img').attr('src', VERDE_HORIZ_P);
+
+        }else if(tiempoGeneral == ESPERA_ROJO_P + ESPERA_VERDE_P){
+            console.log('pasa a rojo')
+            $(btnIz_peatonIz).children('img').attr('src', ROJO_HORIZ_P);
+            clearInterval(intervalId);
+            labelPeaton = ESPERA_ROJO_P;
+            // el .hide() no e sun atributo, e smejor hacer un .attr('hide')
+            cont_iz.hide();
+            intervalId = null;
+            tiempoGeneral = 0;
+            presionado = false;
+        }
+    }
+
+    /*
     let intervalSemaforos;
 
     //segSemaforoCoches determina el tiempo de los semaforos
@@ -15,10 +75,6 @@ $(document).ready(function(){
     let semaforCochesIzquierda = $('.calle-izquierda');
 
     let x = 0;
-    let ambar = false;
-
-
-    let velocidad = 3000;
 
     intervalSemaforos = setInterval(iniciarSemaforosCohes,1000);
     
@@ -54,12 +110,15 @@ $(document).ready(function(){
 
 
 
-    }
+    }*/
 
 
 
 
 /*
+
+    let ambar = false;
+    let velocidad = 3000;
 
     function startSemaforoCoche(){
         

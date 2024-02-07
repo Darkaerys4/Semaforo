@@ -452,3 +452,7 @@
     width: 4.5vh;
     height: 9vh;
 }
+
+button{
+    cursor: pointer;
+}
