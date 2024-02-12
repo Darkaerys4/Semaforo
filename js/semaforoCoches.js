@@ -86,7 +86,7 @@ $(document).ready(function(){
             tiempoGeneral = 0;
             presionado = false;
             cambiarSemaforoC([carretera1, carretera11], VERDE_C);
-            cambiarSemaforoC([ carretera5, carretera13], VERDE_C);
+            cambiarSemaforoC([ carretera5, carretera13], AMBAR_C);
         
         }
     }
