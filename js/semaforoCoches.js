@@ -76,12 +76,14 @@ $(document).ready(function(){
             console.log('pasar a verde');
             $(btnIz_peatonIz).children('img').attr('src', VERDE_HORIZ_P);
 
+        }else if(tiempoGeneral == ESPERA_ROJO_P + ESPERA_VERDE_P - AMBOS_ROJO){
+            $(btnIz_peatonIz).children('img').attr('src', ROJO_HORIZ_P);
         }else if(tiempoGeneral == ESPERA_ROJO_P + ESPERA_VERDE_P){
             console.log('pasa a rojo');
             $(btnIz_peatonIz).children('img').attr('src', ROJO_HORIZ_P);
             clearInterval(intervalId);
             labelPeaton = ESPERA_ROJO_P;
-            cont_iz.css({ opacity: 0 });
+            contIz_iz.css({ opacity: 0 });
             intervalId = null;
             tiempoGeneral = 0;
             presionado = false;
