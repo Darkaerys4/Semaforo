@@ -68,7 +68,7 @@ $(document).ready(function(){
 
 
     function stop() {
-       console.log('STOP');
+        console.log('STOP');
     }
 
     function deRojoAVerdeCoche(){
