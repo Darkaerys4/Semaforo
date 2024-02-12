@@ -103,7 +103,7 @@ $(document).ready(function(){
 
 
 
-//cambio
+//cambio ultimo
 
 /*
         if(tiempoGeneral == ESPERA_ROJO_P){
