@@ -1,26 +1,11 @@
 $(document).ready(function(){
 
-    //peatones izquierda izquierda
-    let btnIz_peatonIz = $('.btnIz-Peaton-Iz-1');
-    let cont_iz = $('#cont-p-iz-iz');
+    let intervalSemaforos;
 
-    //semaforos coches PRICIPALES
-    let carretera1 = $('#carretera1');
-    let carretera11 = $('#carretera11');
-
-    //semaforos coches CARRETERA SECUNDARIA IZQ
-    let carretera5 = $('#carretera5');
-    let carretera13 = $('#carretera13');
-
-
-    let intervalId;
-
-    //tiempos de espera
-    const ESPERA_ROJO_P = 5;
-    const ESPERA_VERDE_P = 8;
-
-    const EMPEZAR_AMBAR_C = 2;
-    const AMBOS_ROJO = 1;
+    //segSemaforoCoches determina el tiempo de los semaforos
+    const TIEMPO_VERDE = 8;
+    const TIEMPO_AMBAR = 1;
+    const TIEMPO_AMBOS_ROJO = 2;
 
     //variables que controlan el contador
     let tiempoGeneral = 0;
@@ -87,7 +72,7 @@ $(document).ready(function(){
             presionado = false;
             cambiarSemaforoC([carretera1, carretera11], VERDE_C);
             cambiarSemaforoC([ carretera5, carretera13], AMBAR_C);
-            
+
         }
     }
 
