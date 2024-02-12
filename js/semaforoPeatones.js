@@ -162,6 +162,8 @@ $(document).ready(function () {
             }
         }, 1000);
     }
+
+    
     //calle secundaria por abajo
 
     var pulsarBoton = false;
