@@ -5,11 +5,11 @@ $(document).ready(function () {
             return;
         }
         pulsarBoton = true;
-        var contador1 = 3;
-        $(".contPeatones-Ar-1").text(contador1);
+        var contador1 = 5;
+        $("#contPeatones-Ar-1").text(contador1);
         var intervalo1 = setInterval(() => {
             contador1--;
-            $(".contPeatones-Ar-1").text(contador1);
+            $("#contPeatones-Ar-1").text(contador1);
             if (contador1 == 1) {
                 $(".sema-Co-Ar").attr("src", "../recursos/img/semafororojo.png");
             }
@@ -22,11 +22,11 @@ $(document).ready(function () {
     function controlPeatonesAr1(colorP, colorS) {
         $(".sema-Co-Ar").attr("src", "../recursos/img/semaforo" + colorS + ".png");
         $(".img-rojo-Vr-1").attr("src", "../recursos/img/Peatones" + colorP + "Vertical.png");
-        var segundos = 5;
-        $(".contPeatones-Ar-1").text(segundos);
+        var segundos = 8;
+        $("#contPeatones-Ar-1").text(segundos);
         intervalo2 = setInterval(function () {
             segundos--;
-            $(".contPeatones-Ar-1").text(segundos);
+            $("#contPeatones-Ar-1").text(segundos);
             if (segundos == 0) {
                 clearInterval(intervalo2);
                 cambioARojoVerAr();
@@ -38,12 +38,12 @@ $(document).ready(function () {
                 pulsarBoton = false;
                 controlPeatonesAr1("rojo", "rojo")
                 clearInterval(intervalo2);
-                $(".contPeatones-Ar-1").text(" ");
+                $("#contPeatones-Ar-1").text(" ");
                 if (colorS == "rojo") {
                     setTimeout(function () {
                         controlPeatonesAr1("rojo", "ambar")
                         clearInterval(intervalo2);
-                        $(".contPeatones-Ar-1").text(" ");
+                        $("#contPeatones-Ar-1").text(" ");
                     }, 2000);
                 }
 
