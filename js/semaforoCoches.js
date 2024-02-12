@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
-    //peatones izquierda izquierda
+    //semaforos peatones izquierda izquierda
     let btnIz_peatonIz = $('.btnIz-Peaton-Iz-1');
-    let cont_iz = $('#cont-p-iz-iz');
+    let contIz_iz = $('#cont-p-iz-iz');
 
     //semaforos coches PRICIPALES
     let carretera1 = $('#carretera1');
@@ -41,28 +41,33 @@ $(document).ready(function(){
     const VERDE_C = '../recursos/img/semaforoverde.png';
 
 
+
+
+
+    //*********** PROGRAMACIÓN DE BOTONES DE PEATONES *************//
+
     btnIz_peatonIz.on( 'click', function() {
-        console.log('BOTON PRESIONADO')
+        console.log('BOTON PRESIONADO IZQUIERDA IZQUIERDA')
 
         if(presionado){
             console.log('NO PUDES PRESIONARLO OTRA VEZ')
             return;
         }
-        cont_iz.text(ESPERA_ROJO_P);
+        contIz_iz.text(ESPERA_ROJO_P);
         presionado = true;
-        cont_iz.css({ opacity: 1 });
-        intervalId = setInterval(iniciarPeatones,1000);
+        contIz_iz.css({ opacity: 1 });
+        intervalId = setInterval(iniciarPeatonesIzquierda,1000);
 
     });
 
 
-    function iniciarPeatones() {
+    function iniciarPeatonesIzquierda() {
 
         tiempoGeneral++;
         console.log(tiempoGeneral);
         labelPeaton--;
-        cont_iz.text(labelPeaton);
-        
+        contIz_iz.text(labelPeaton);
+
 
         if(tiempoGeneral == ESPERA_ROJO_P - EMPEZAR_AMBAR_C){ // 5-2 = 3
             cambiarSemaforoC([carretera1, carretera11, carretera5, carretera13], AMBAR_C);
@@ -71,17 +76,19 @@ $(document).ready(function(){
             cambiarSemaforoC([carretera1, carretera11, carretera5, carretera13], ROJO_C);
 
         }else if(tiempoGeneral == ESPERA_ROJO_P){ //5
-            cont_iz.text(ESPERA_VERDE_P);
+            contIz_iz.text(ESPERA_VERDE_P);
             labelPeaton = ESPERA_VERDE_P;
             console.log('pasar a verde');
             $(btnIz_peatonIz).children('img').attr('src', VERDE_HORIZ_P);
 
+        }else if(tiempoGeneral == ESPERA_ROJO_P + ESPERA_VERDE_P - AMBOS_ROJO){
+            $(btnIz_peatonIz).children('img').attr('src', ROJO_HORIZ_P);
         }else if(tiempoGeneral == ESPERA_ROJO_P + ESPERA_VERDE_P){
             console.log('pasa a rojo');
             $(btnIz_peatonIz).children('img').attr('src', ROJO_HORIZ_P);
             clearInterval(intervalId);
             labelPeaton = ESPERA_ROJO_P;
-            cont_iz.css({ opacity: 0 });
+            contIz_iz.css({ opacity: 0 });
             intervalId = null;
             tiempoGeneral = 0;
             presionado = false;
@@ -90,6 +97,8 @@ $(document).ready(function(){
             
         }
     }
+
+
 
     //recibe una lista de elementos y cambia la foto por la ruta pasada tmb como argumento
     function cambiarSemaforoC(list, fotoCambiar){
@@ -100,25 +109,3 @@ $(document).ready(function(){
 
     
 });
-
-
-
-//cambio ultimo
-
-/*
-        if(tiempoGeneral == ESPERA_ROJO_P){
-            cont_iz.text(ESPERA_VERDE_P);
-            labelPeaton = ESPERA_VERDE_P;
-            console.log('pasar a verde');
-            $(btnIz_peatonIz).children('img').attr('src', VERDE_HORIZ_P);
-
-        }else if(tiempoGeneral == ESPERA_ROJO_P + ESPERA_VERDE_P){
-            console.log('pasa a rojo');
-            $(btnIz_peatonIz).children('img').attr('src', ROJO_HORIZ_P);
-            clearInterval(intervalId);
-            labelPeaton = ESPERA_ROJO_P;
-            cont_iz.css({ opacity: 0 });
-            intervalId = null;
-            tiempoGeneral = 0;
-            presionado = false;
-        }*/
