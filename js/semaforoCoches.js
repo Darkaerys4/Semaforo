@@ -102,6 +102,9 @@ $(document).ready(function(){
 });
 
 
+
+
+
 /*
         if(tiempoGeneral == ESPERA_ROJO_P){
             cont_iz.text(ESPERA_VERDE_P);
