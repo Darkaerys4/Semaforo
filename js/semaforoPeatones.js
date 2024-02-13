@@ -146,11 +146,11 @@ $(document).ready(function () {
             case tiempoGen2 == cont_peatonesVerde2://5
                 cont_iz_Ab1.text(cont_peatonesRojo2);
                 contadorPeaton2 = cont_peatonesRojo2; //8
-                console.log('pasar a verde');
+                console.log('pasar a rojo');
                 $(btnIz_peatones_Iz_Ab1).children('img').attr("src", img_PeatonVerdeVert2);
                 break;
             case tiempoGen2 == cont_peatonesRojo2 + cont_peatonesVerde2:
-                console.log("pasar a rojo");
+                console.log("pasar a ambar");
                 $(btnIz_peatones_Iz_Ab1).children('img').attr("src", img_PeatonRojoVert2);
                 cont_iz_Ab1.css({ opacity: 0 });
                 break;
