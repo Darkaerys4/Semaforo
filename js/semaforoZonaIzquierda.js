@@ -47,6 +47,7 @@ $(document).ready(function () {
     });
 
     function iniciarContador() {
+
         tiempoGen++;
         console.log(tiempoGen);
         contadorPeaton--;
@@ -54,21 +55,27 @@ $(document).ready(function () {
 
         switch (true) {
             case tiempoGen == cont_peatonesVerde - ambos_coches_Ambar://5-1=4
+
                 cambioSemaforoCoche([carretera5, carretera8], rojo_CoIz);
                 break;
 
             case tiempoGen == cont_peatonesVerde://5
+
                 cont_iz_Ar1.text(cont_peatonesRojo);
                 contadorPeaton = cont_peatonesRojo; //8
                 console.log('pasar a rojo');
                 $(btnIz_peatones_Iz_Ar1).children('img').attr("src", img_PeatonVerdeVert);
                 break;
+
             case tiempoGen == cont_peatonesRojo + cont_peatonesVerde:
+
                 console.log("pasar a ambar");
                 $(btnIz_peatones_Iz_Ar1).children('img').attr("src", img_PeatonRojoVert);
                 cont_iz_Ar1.css({ opacity: 0 });
                 break;
-            case tiempoGen == cont_peatonesRojo + cont_peatonesVerde +  ambos_coches_Ambar:
+
+            case tiempoGen == cont_peatonesRojo + cont_peatonesVerde + ambos_coches_Ambar:
+
                 clearInterval(internavlId);
                 internavlId = null;
                 tiempoGen = 0;
@@ -77,13 +84,15 @@ $(document).ready(function () {
                 cont_iz_Ar1.css({ opacity: 0 });
                 cambioSemaforoCoche([carretera5, carretera8], ambar_CoIz);
                 break;
+
         }
 
         function cambioSemaforoCoche(lista, fotoCambio) {
+
             for (let i = 0; i < lista.length; i++) {
                 lista[i].attr("src", fotoCambio)
-
             }
+
         }
     }
 
@@ -122,38 +131,48 @@ $(document).ready(function () {
     const rojo_CoIzAb = "../recursos/img/semafororojo.png";
 
     btnIz_peatones_Iz_Ab1.on("click", function () {
+
         console.log("Boton Peatones ARRIBA IZ PRESIONADO");
         if (btnPresionado2) {
             console.log("no puedes presionar lo siento");
             return;
         }
+        
         cont_iz_Ab1.text(cont_peatonesVerde2);
         btnPresionado2 = true;
         cont_iz_Ab1.css({ opacity: 1 });
         internavlId2 = setInterval(iniciarContador2, 1000)
+
     });
     function iniciarContador2() {
+
         tiempoGen2++;
         console.log(tiempoGen);
         contadorPeaton2--;
         cont_iz_Ab1.text(contadorPeaton2);
 
         switch (true) {
+
             case tiempoGen2 == cont_peatonesVerde2 - ambos_coches_Ambar2://5-1=4
+
                 cambioSemaforoCoche2([carretera13, carretera4], rojo_CoIzAb);
                 break;
 
             case tiempoGen2 == cont_peatonesVerde2://5
+
                 cont_iz_Ab1.text(cont_peatonesRojo2);
                 contadorPeaton2 = cont_peatonesRojo2; //8
                 console.log('pasar a rojo');
                 $(btnIz_peatones_Iz_Ab1).children('img').attr("src", img_PeatonVerdeVert2);
                 break;
+
             case tiempoGen2 == cont_peatonesRojo2 + cont_peatonesVerde2:
+
                 console.log("pasar a ambar");
                 $(btnIz_peatones_Iz_Ab1).children('img').attr("src", img_PeatonRojoVert2);
                 cont_iz_Ab1.css({ opacity: 0 });
                 break;
+
             case tiempoGen2 == cont_peatonesRojo2 + cont_peatonesVerde2 + ambos_coches_Ambar2:
 
                 clearInterval(internavlId2);
@@ -165,17 +184,18 @@ $(document).ready(function () {
                 break;
         }
         function cambioSemaforoCoche2(lista2, fotoCambio2) {
+
             for (let i = 0; i < lista2.length; i++) {
                 lista2[i].attr("src", fotoCambio2)
-
             }
+
         }
     }
 
 
 
 
-/**Parte antigua con 2 interval, ya no se usa, ejemplo para entedner setinterval */
+    /**Parte antigua con 2 interval, ya no se usa, ejemplo para entedner setinterval */
     // var pulsarBoton = false;
     // $(".btnIz-Peaton-Ar").click(function () {
     //     if (pulsarBoton) {
@@ -229,9 +249,6 @@ $(document).ready(function () {
     // }
 
 
-
-
-
     //     var pulsarBoton2 = false;
     //     $(".btnIz-Peaton-Ab").click(function () {
     //         if (pulsarBoton2) {
@@ -251,7 +268,6 @@ $(document).ready(function () {
     //                 controlPeatonesAr2("verde", "rojo")
     //             }
     //         }, 1000);
-
     //     });
     //     function controlPeatonesAr2(colorP, colorS) {
     //         $(".sema-Co-Ab").attr("src", "../recursos/img/semaforo" + colorS + ".png");
@@ -283,8 +299,6 @@ $(document).ready(function () {
     //             }
     //         }
     //     }
-
-
 
     //     //calle segundaria derecha
     //     var pulsarBoton = false;
@@ -341,7 +355,6 @@ $(document).ready(function () {
     //             }
     //         }, 1000);
     //     }
-
 
     //     //calle secundaria por abajo
 
