@@ -261,7 +261,7 @@
 .contPeatones{
     background-color: black;
     color: white;
-    opacity: 1;
+    opacity: 0;
     padding: 5px;
     font-weight: bolder;
 }
