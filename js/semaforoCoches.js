@@ -167,9 +167,4 @@ $(document).ready(function(){
             list[i].attr('src', fotoCambiar);
         }
     }
-
-
-    
-
-    
 });
