@@ -104,14 +104,15 @@ $(document).ready(function(){
             console.log('pasar a verde');
             $(btnIz_peatonDer).children('img').attr('src', VERDE_HORIZ_P);
 
-        }else if(tiempoGeneral_der == ESPERA_ROJO_P + ESPERA_VERDE_P - AMBOS_ROJO){
-            $(btnIz_peatonDer).children('img').attr('src', ROJO_HORIZ_P);
         }else if(tiempoGeneral_der == ESPERA_ROJO_P + ESPERA_VERDE_P){
+            $(btnIz_peatonDer).children('img').attr('src', ROJO_HORIZ_P);
+            contIz_der.css({ opacity: 0 });
+            
+        }else if(tiempoGeneral_der == ESPERA_ROJO_P + ESPERA_VERDE_P + AMBOS_ROJO){
             console.log('pasa a rojo');
             $(btnIz_peatonDer).children('img').attr('src', ROJO_HORIZ_P);
             clearInterval(intervalId_der);
             labelPeaton_der = ESPERA_ROJO_P;
-            contIz_der.css({ opacity: 0 });
             intervalId_der = null;
             tiempoGeneral_der = 0;
             presionado_der = false;
@@ -142,14 +143,15 @@ $(document).ready(function(){
             console.log('pasar a verde');
             $(btnIz_peatonIz).children('img').attr('src', VERDE_HORIZ_P);
 
-        }else if(tiempoGeneral == ESPERA_ROJO_P + ESPERA_VERDE_P - AMBOS_ROJO){
-            $(btnIz_peatonIz).children('img').attr('src', ROJO_HORIZ_P);
         }else if(tiempoGeneral == ESPERA_ROJO_P + ESPERA_VERDE_P){
+            $(btnIz_peatonIz).children('img').attr('src', ROJO_HORIZ_P);
+            contIz_iz.css({ opacity: 0 });
+
+        }else if(tiempoGeneral == ESPERA_ROJO_P + ESPERA_VERDE_P + AMBOS_ROJO){
             console.log('pasa a rojo');
             $(btnIz_peatonIz).children('img').attr('src', ROJO_HORIZ_P);
             clearInterval(intervalId);
             labelPeaton = ESPERA_ROJO_P;
-            contIz_iz.css({ opacity: 0 });
             intervalId = null;
             tiempoGeneral = 0;
             presionado = false;
