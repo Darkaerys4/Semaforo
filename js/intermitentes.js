@@ -18,6 +18,7 @@ $(document).ready(function(){
 
     const SEMAFORO_APAGADO_C = '../recursos/img/semaforo.png';
     const SEMAFORO_AMBAR_C = '../recursos/img/semaforoambar.png';
+    const SEMAFORO_ROJO_C = '../recursos/img/semafororojo.png';
 
     intermitentes_interval = setInterval(iniciarIntermitentes,900);
     let inter = true;
@@ -37,15 +38,15 @@ $(document).ready(function(){
     function alternarSemaforos(fotoCambiar){ 
 
         for(let i = 0; i< list.length ;i++){
+            //list[i].attr('src', fotoCambiar);
+            let src = list[i].attr('src');
+
+            if(src == SEMAFORO_ROJO_C){
+                continue;
+                
+            }
             list[i].attr('src', fotoCambiar);
-        }
 
-    }
-
-    function verificar(){
-
-        for(let i = 0; i< list.length ;i++){
-            list[i].attr('src', fotoCambiar);
         }
 
     }
