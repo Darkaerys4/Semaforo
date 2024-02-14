@@ -137,7 +137,7 @@ $(document).ready(function () {
             console.log("no puedes presionar lo siento");
             return;
         }
-        
+
         cont_iz_Ab1.text(cont_peatonesVerde2);
         btnPresionado2 = true;
         cont_iz_Ab1.css({ opacity: 1 });
