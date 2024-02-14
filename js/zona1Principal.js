@@ -3,6 +3,7 @@ $(document).ready(function(){
     //semaforos peatones izquierda izquierda
     let btnIz_peatonIz = $('.btnIz-Peaton-Iz-1');
     let contIz_iz = $('#cont-p-iz-iz');
+    
     //semaforos peatones izquierda derecha
     let btnIz_peatonDer = $('.btnIz-Peaton-Iz-2');
     let contIz_der = $('#cont-p-iz-der');
@@ -107,7 +108,7 @@ $(document).ready(function(){
         }else if(tiempoGeneral_der == ESPERA_ROJO_P + ESPERA_VERDE_P){
             $(btnIz_peatonDer).children('img').attr('src', ROJO_HORIZ_P);
             contIz_der.css({ opacity: 0 });
-            
+
         }else if(tiempoGeneral_der == ESPERA_ROJO_P + ESPERA_VERDE_P + AMBOS_ROJO){
             console.log('pasa a rojo');
             $(btnIz_peatonDer).children('img').attr('src', ROJO_HORIZ_P);
