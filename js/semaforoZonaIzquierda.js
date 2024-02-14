@@ -137,7 +137,7 @@ $(document).ready(function () {
             console.log("no puedes presionar lo siento");
             return;
         }
-        
+
         cont_iz_Ab1.text(cont_peatonesVerde2);
         btnPresionado2 = true;
         cont_iz_Ab1.css({ opacity: 1 });
@@ -192,8 +192,7 @@ $(document).ready(function () {
         }
     }
 
-
-
+   
 
     /**Parte antigua con 2 interval, ya no se usa, ejemplo para entedner setinterval */
     // var pulsarBoton = false;
