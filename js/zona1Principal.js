@@ -66,7 +66,7 @@ $(document).ready(function(){
         console.log('BOTON PRESIONADO IZQUIERDA IZQUIERDA')
 
         if(presionado){
-            console.log('NO PUDES PRESIONARLO OTRA VEZ')
+            console.log('NO PUDES PRESIONARLO OTRA VEZ');
             return;
         }
         contIz_iz.text(ESPERA_ROJO_P);

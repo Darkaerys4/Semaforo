@@ -35,6 +35,10 @@ $(document).ready(function () {
     const ambar_CoDr_Ar = "../recursos/img/semaforoambar.png";
     const rojo_CoDr_Ar = "../recursos/img/semafororojo.png";
 
+    //boton a deshabilitar
+    let btnDer_peatonIz = $('.btnDer-Peaton-Izq');
+    let btnDer_peatonDer = $('.btnDer-Peaton-Der');
+
     btnDr_peatones_Ar1.on("click", function () {
 
         console.log("Boton Peatones ARRIBA IZ PRESIONADO");
@@ -46,6 +50,8 @@ $(document).ready(function () {
         cont_dr_Ar1.text(cont_peatonesVerde_Dr_Ar);
         btnPresionado_Dr_Ar = true;
         cont_dr_Ar1.css({ opacity: 1 });
+        btnDer_peatonIz.prop("disabled", true);
+        btnDer_peatonDer.prop("disabled", true);
         internavlIdDrAr = setInterval(iniciarContadorDrAr, 1000)
 
     });
@@ -87,6 +93,8 @@ $(document).ready(function () {
                 contadorPeaton_Dr_Ar = cont_peatonesVerde_Dr_Ar; //5
                 btnPresionado_Dr_Ar = false;
                 cambioSemaforoCocheDr([carretera6, carretera7], ambar_CoDr_Ar);
+                btnDer_peatonIz.prop("disabled", false);
+                btnDer_peatonDer.prop("disabled", false);
                 break;
         }
         function cambioSemaforoCocheDr(lista3, fotoCambio3) {
@@ -145,6 +153,8 @@ $(document).ready(function () {
         cont_dr_Ab1.text(cont_peatonesVerde_Dr_Ab);
         btnPresionado_Dr_Ab = true;
         cont_dr_Ab1.css({ opacity: 1 });
+        btnDer_peatonIz.prop("disabled", true);
+        btnDer_peatonDer.prop("disabled", true);
         internavlIdDrAb = setInterval(iniciarContadorDrAb, 1000)
 
     });
@@ -185,6 +195,8 @@ $(document).ready(function () {
                 tiempoGenDrAb = 0;
                 contadorPeaton_Dr_Ab = cont_peatonesVerde_Dr_Ab; //5
                 btnPresionado_Dr_Ab = false;
+                btnDer_peatonIz.prop("disabled", false);
+                btnDer_peatonDer.prop("disabled", false);
                 cambioSemaforoCocheDrAb([carretera14, carretera3], ambar_CoDr_Ab);
                 break;
         }
