@@ -49,6 +49,14 @@ $(document).ready(function(){
     const VERDE_C = '../recursos/img/semaforoverde.png';
 
 
+    //***********  DESHABILITAMIENTO DE BOTONES DE PEATÓN ****************//
+
+    var btnDr_peatones_Ar1 = $(".btnDr-Peaton-Ar-1");
+    var btnIz_peatones_Dr_Ab = $(".btnDr-Peaton-Ab");
+    btnDer_peatonIz;
+    btnDer_peatonDer;
+
+
     //*********** PROGRAMACIÓN DE BOTONES DE PEATONES ZONA2 *************//
 
 
@@ -56,12 +64,16 @@ $(document).ready(function(){
         console.log('BOTON ZONA2 IZQUIERDA')
 
         if(presionadoZona2_iz){
-            console.log('NO PUDES PRESIONARLO OTRA VEZ')
+            console.log('NO PUDES PRESIONARLO OTRA VEZ');
             return;
         }
+
         contDer_iz.text(ESPERA_ROJO_P);
         presionadoZona2_iz = true;
         contDer_iz.css({ opacity: 1 });
+        btnIz_peatones_Dr_Ab.prop("disabled", true);
+        btnDr_peatones_Ar1.prop("disabled", true);
+        btnDer_peatonDer.prop("disabled", true);
         intervalIdZona2_iz = setInterval(iniciarPeatonesZona2Iz,1000);
     });
 
@@ -69,13 +81,16 @@ $(document).ready(function(){
         console.log('BOTON ZONA2 DERECHA');
 
         if(presionadoZona2_der){
-            console.log('NO PUDES PRESIONARLO OTRA VEZ');
+            console.log('NO PUEDES PRESIONARLO OTRA VEZ');
             return;
         }
 
         contDer_der.text(ESPERA_ROJO_P);
         presionadoZona2_der = true;
         contDer_der.css({ opacity: 1 });
+        btnIz_peatones_Dr_Ab.prop("disabled", true);
+        btnDr_peatones_Ar1.prop("disabled", true);
+        btnDer_peatonIz.prop("disabled", true);
         intervalIdZona2_der = setInterval(iniciarPeatonesZona2Der,1000);
 
     });
@@ -110,6 +125,9 @@ $(document).ready(function(){
             intervalIdZona2_der = null;
             tiempoZona2_der = 0;
             presionadoZona2_der = false;
+            btnIz_peatones_Dr_Ab.prop("disabled", false);
+            btnDr_peatones_Ar1.prop("disabled", false);
+            btnDer_peatonIz.prop("disabled", false);
             cambiarSemaforoC([carretera2, carretera10], VERDE_C);
             cambiarSemaforoC([ carretera7, carretera3], AMBAR_C);
             
@@ -148,6 +166,9 @@ $(document).ready(function(){
             intervalIdZona2_iz = null;
             tiempoZona2_iz = 0;
             presionadoZona2_iz = false;
+            btnIz_peatones_Dr_Ab.prop("disabled", false);
+            btnDr_peatones_Ar1.prop("disabled", false);
+            btnDer_peatonDer.prop("disabled", false);
             cambiarSemaforoC([carretera2, carretera10], VERDE_C);
             cambiarSemaforoC([ carretera6, carretera14], AMBAR_C);
             
