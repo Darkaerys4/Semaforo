@@ -54,6 +54,12 @@ $(document).ready(function(){
     const VERDE_C = '../recursos/img/semaforoverde.png';
 
 
+    //VARIABLES PARA DISEBLEAR BOTONES
+    var btnIz_peatones_Iz_Ar1 = $(".btnIz-Peaton-Ar-1");
+    var btnIz_peatones_Iz_Ab1 = $(".btnIz-Peaton-Ab-1");
+
+
+
     //*********** PROGRAMACIÓN DE BOTONES DE PEATONES *************//
 
     btnIz_peatonIz.on( 'click', function() {
@@ -65,6 +71,9 @@ $(document).ready(function(){
         }
         contIz_iz.text(ESPERA_ROJO_P);
         presionado = true;
+        btnIz_peatones_Iz_Ar1.prop('disabled', true);
+        btnIz_peatones_Iz_Ab1.prop('disabled', true);
+        btnIz_peatonDer.prop('disabled', true);
         contIz_iz.css({ opacity: 1 });
         intervalId = setInterval(iniciarPeatonesIzquierda,1000);
 
@@ -80,6 +89,9 @@ $(document).ready(function(){
         contIz_der.text(ESPERA_ROJO_P);
         presionado_der = true;
         contIz_der.css({ opacity: 1 });
+        btnIz_peatones_Iz_Ar1.prop('disabled', true);
+        btnIz_peatones_Iz_Ab1.prop('disabled', true);
+        btnIz_peatonIz.prop('disabled', true);
         intervalId_der = setInterval(iniciarPeatonesDerecha,1000);
 
     });
@@ -117,6 +129,9 @@ $(document).ready(function(){
             intervalId_der = null;
             tiempoGeneral_der = 0;
             presionado_der = false;
+            btnIz_peatones_Iz_Ar1.prop('disabled', false);
+            btnIz_peatones_Iz_Ab1.prop('disabled', false);
+            btnIz_peatonIz.prop('disabled', false);
             cambiarSemaforoC([carretera1, carretera11], VERDE_C);
             cambiarSemaforoC([ carretera8, carretera4], AMBAR_C);
             
@@ -156,6 +171,9 @@ $(document).ready(function(){
             intervalId = null;
             tiempoGeneral = 0;
             presionado = false;
+            btnIz_peatones_Iz_Ar1.prop('disabled', false);
+            btnIz_peatones_Iz_Ab1.prop('disabled', false);
+            btnIz_peatonDer.prop('disabled', false);
             cambiarSemaforoC([carretera1, carretera11], VERDE_C);
             cambiarSemaforoC([ carretera5, carretera13], AMBAR_C);
             
