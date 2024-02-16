@@ -33,6 +33,14 @@ $(document).ready(function () {
     const ambar_CoIz = "../recursos/img/semaforoambar.png";
     const rojo_CoIz = "../recursos/img/semafororojo.png";
 
+
+    //CONTROLADORES DISABLED SEMAFOROS PEATONES
+
+    //semaforo derecha
+    let btnIz_peatonIz = $('.btnIz-Peaton-Iz-1');
+    //semaforo izquierda
+    let btnIz_peatonDer = $('.btnIz-Peaton-Iz-2');
+
     btnIz_peatones_Iz_Ar1.on("click", function () {
         console.log("Boton Peatones ARRIBA IZ PRESIONADO");
         if (btnPresionado) {
@@ -42,6 +50,8 @@ $(document).ready(function () {
 
         cont_iz_Ar1.text(cont_peatonesVerde);
         btnPresionado = true;
+        btnIz_peatonIz.prop('disabled', true);
+        btnIz_peatonDer.prop('disabled', true);
         cont_iz_Ar1.css({ opacity: 1 });
         internavlId = setInterval(iniciarContador, 1000)
     });
@@ -83,6 +93,8 @@ $(document).ready(function () {
                 btnPresionado = false;
                 cont_iz_Ar1.css({ opacity: 0 });
                 cambioSemaforoCoche([carretera5, carretera8], ambar_CoIz);
+                btnIz_peatonIz.prop('disabled', false);
+                btnIz_peatonDer.prop('disabled', false);
                 break;
 
         }
@@ -140,6 +152,8 @@ $(document).ready(function () {
 
         cont_iz_Ab1.text(cont_peatonesVerde2);
         btnPresionado2 = true;
+        btnIz_peatonIz.prop('disabled', true);
+        btnIz_peatonDer.prop('disabled', true);
         cont_iz_Ab1.css({ opacity: 1 });
         internavlId2 = setInterval(iniciarContador2, 1000)
 
@@ -180,6 +194,8 @@ $(document).ready(function () {
                 tiempoGen2 = 0;
                 contadorPeaton2 = cont_peatonesVerde2; //5
                 btnPresionado2 = false;
+                btnIz_peatonIz.prop('disabled', false);
+                btnIz_peatonDer.prop('disabled', false);
                 cambioSemaforoCoche2([carretera13, carretera4], ambar_CoIzAb);
                 break;
         }
