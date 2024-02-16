@@ -35,11 +35,6 @@ $(document).ready(function () {
         window.close();
     });
 
-    // $("#btn-Pruebas").click(function(e){
-    // $('#mapa.html').fadeIn(slow);
-    // $('#h1').fadeIn(1000);
-    // });
-
     var usuCorrecto = false;
     $("#btnIngresar").click(function (e) {
         if ($("#identificador").val().length < 1 || $("#nombre").val().length < 1) {
@@ -54,9 +49,8 @@ $(document).ready(function () {
             }
         }
         if (usuCorrecto) {
-            console.log("Usuario loggeado");
             $("#div1").fadeOut(1500, function () {
-                location.href = "mapaANTIGUO.html";
+                location.href = "mapa.html";
             });
             
         } else {

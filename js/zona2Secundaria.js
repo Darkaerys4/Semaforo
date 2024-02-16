@@ -41,9 +41,7 @@ $(document).ready(function () {
 
     btnDr_peatones_Ar1.on("click", function () {
 
-        console.log("Boton Peatones ARRIBA IZ PRESIONADO");
         if (btnPresionado_Dr_Ar) {
-            console.log("no puedes presionar lo siento");
             return;
         }
 
@@ -59,7 +57,6 @@ $(document).ready(function () {
     function iniciarContadorDrAr() {
 
         tiempoGenDrAr++;
-        console.log(tiempoGenDrAr);
         contadorPeaton_Dr_Ar--;
         cont_dr_Ar1.text(contadorPeaton_Dr_Ar);
 
@@ -74,13 +71,11 @@ $(document).ready(function () {
 
                 cont_dr_Ar1.text(cont_peatonesRojo_Dr_Ar);
                 contadorPeaton_Dr_Ar = cont_peatonesRojo_Dr_Ar; //8
-                console.log('pasar a rojo');
                 $(btnDr_peatones_Ar1).children('img').attr("src", img_PeatonVerdeVert_Dr_Ar);
                 break;
 
             case tiempoGenDrAr == cont_peatonesRojo_Dr_Ar + cont_peatonesVerde_Dr_Ar:
 
-                console.log("pasar a ambar");
                 $(btnDr_peatones_Ar1).children('img').attr("src", img_PeatonRojoVert_Dr_Ar);
                 cont_dr_Ar1.css({ opacity: 0 });
                 break;
@@ -144,9 +139,7 @@ $(document).ready(function () {
 
     btnIz_peatones_Dr_Ab.on("click", function () {
 
-        console.log("Boton Peatones ARRIBA dr abajo PRESIONADO");
         if (btnPresionado_Dr_Ab) {
-            console.log("no puedes presionar lo siento");
             return;
         }
 
@@ -162,7 +155,6 @@ $(document).ready(function () {
     function iniciarContadorDrAb() {
 
         tiempoGenDrAb++;
-        console.log(tiempoGenDrAb);
         contadorPeaton_Dr_Ab--;
         cont_dr_Ab1.text(contadorPeaton_Dr_Ab);
 
@@ -177,13 +169,11 @@ $(document).ready(function () {
 
                 cont_dr_Ab1.text(cont_peatonesRojo_Dr_Ab);
                 contadorPeaton_Dr_Ab = cont_peatonesRojo_Dr_Ab; //8
-                console.log('pasar a rojo');
                 $(btnIz_peatones_Dr_Ab).children('img').attr("src", img_PeatonVerdeVert_Dr_Ab);
                 break;
 
             case tiempoGenDrAb == cont_peatonesRojo_Dr_Ab + cont_peatonesVerde_Dr_Ab:
 
-                console.log("pasar a ambar");
                 $(btnIz_peatones_Dr_Ab).children('img').attr("src", img_PeatonRojoVert_Dr_Ab);
                 cont_dr_Ab1.css({ opacity: 0 });
                 break;

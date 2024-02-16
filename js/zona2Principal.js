@@ -61,10 +61,8 @@ $(document).ready(function(){
 
 
     btnDer_peatonIz.on( 'click', function() {
-        console.log('BOTON ZONA2 IZQUIERDA')
 
         if(presionadoZona2_iz){
-            console.log('NO PUDES PRESIONARLO OTRA VEZ');
             return;
         }
 
@@ -78,10 +76,8 @@ $(document).ready(function(){
     });
 
     btnDer_peatonDer.on( 'click', function() {
-        console.log('BOTON ZONA2 DERECHA');
 
         if(presionadoZona2_der){
-            console.log('NO PUEDES PRESIONARLO OTRA VEZ');
             return;
         }
 
@@ -97,7 +93,6 @@ $(document).ready(function(){
 
     function iniciarPeatonesZona2Der(){
         tiempoZona2_der++;
-        console.log(tiempoZona2_der);
         labelPeaton_zona2der--;
         contDer_der.text(labelPeaton_zona2der);
 
@@ -110,7 +105,6 @@ $(document).ready(function(){
         }else if(tiempoZona2_der == ESPERA_ROJO_P){ //5
             contDer_der.text(ESPERA_VERDE_P);
             labelPeaton_zona2der = ESPERA_VERDE_P;
-            console.log('pasar a verde');
             $(btnDer_peatonDer).children('img').attr('src', VERDE_HORIZ_P);
 
         }else if(tiempoZona2_der == ESPERA_ROJO_P + ESPERA_VERDE_P){
@@ -118,7 +112,6 @@ $(document).ready(function(){
             contDer_der.css({ opacity: 0 });
 
         }else if(tiempoZona2_der == ESPERA_ROJO_P + ESPERA_VERDE_P + AMBOS_ROJO){
-            console.log('pasa a rojo');
             $(btnDer_peatonDer).children('img').attr('src', ROJO_HORIZ_P);
             clearInterval(intervalIdZona2_der);
             labelPeaton_zona2der = ESPERA_ROJO_P;
@@ -138,7 +131,6 @@ $(document).ready(function(){
 
     function iniciarPeatonesZona2Iz(){
         tiempoZona2_iz++;
-        console.log(tiempoZona2_iz);
         labelPeaton_zona2Iz--;
         contDer_iz.text(labelPeaton_zona2Iz);
 
@@ -151,7 +143,6 @@ $(document).ready(function(){
         }else if(tiempoZona2_iz == ESPERA_ROJO_P){ //5
             contDer_iz.text(ESPERA_VERDE_P);
             labelPeaton_zona2Iz = ESPERA_VERDE_P;
-            console.log('pasar a verde');
             $(btnDer_peatonIz).children('img').attr('src', VERDE_HORIZ_P);
 
         }else if(tiempoZona2_iz == ESPERA_ROJO_P + ESPERA_VERDE_P){
@@ -159,7 +150,6 @@ $(document).ready(function(){
             contDer_iz.css({ opacity: 0 });
 
         }else if(tiempoZona2_iz == ESPERA_ROJO_P + ESPERA_VERDE_P + AMBOS_ROJO){
-            console.log('pasa a rojo');
             $(btnDer_peatonIz).children('img').attr('src', ROJO_HORIZ_P);
             clearInterval(intervalIdZona2_iz);
             labelPeaton_zona2Iz = ESPERA_ROJO_P;
