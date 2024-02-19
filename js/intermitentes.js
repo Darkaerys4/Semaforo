@@ -35,7 +35,6 @@ $(document).ready(function(){
 
     function iniciarIntermitentes(){
         cont++;
-        console.log('interval ' + cont);
 
         if(inter){
             alternarSemaforos(SEMAFORO_APAGADO_C);
@@ -46,7 +45,6 @@ $(document).ready(function(){
         }
 
         if(cont == ESPERA_VERDE_P){ //8
-            console.log('cambiar')
             cambiarSemaforos([carretera12,carretera9], SEMAFORO_AMBAR_C);
         }else if(cont == ESPERA_VERDE_P + ESPERA_AMBAR){ //8+1 = 9
             cambiarSemaforos([carretera12,carretera9], SEMAFORO_ROJO_C);
@@ -61,7 +59,6 @@ $(document).ready(function(){
     function alternarSemaforos(fotoCambiar){ 
 
         for(let i = 0; i< list.length ;i++){
-            //list[i].attr('src', fotoCambiar);
             let src = list[i].attr('src');
 
             if(src == SEMAFORO_ROJO_C){

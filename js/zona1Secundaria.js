@@ -42,9 +42,7 @@ $(document).ready(function () {
     let btnIz_peatonDer = $('.btnIz-Peaton-Iz-2');
 
     btnIz_peatones_Iz_Ar1.on("click", function () {
-        console.log("Boton Peatones ARRIBA IZ PRESIONADO");
         if (btnPresionado) {
-            console.log("no puedes presionar lo siento");
             return;
         }
 
@@ -59,7 +57,6 @@ $(document).ready(function () {
     function iniciarContador() {
 
         tiempoGen++;
-        console.log(tiempoGen);
         contadorPeaton--;
         cont_iz_Ar1.text(contadorPeaton);
 
@@ -73,13 +70,11 @@ $(document).ready(function () {
 
                 cont_iz_Ar1.text(cont_peatonesRojo);
                 contadorPeaton = cont_peatonesRojo; //8
-                console.log('pasar a rojo');
                 $(btnIz_peatones_Iz_Ar1).children('img').attr("src", img_PeatonVerdeVert);
                 break;
 
             case tiempoGen == cont_peatonesRojo + cont_peatonesVerde:
 
-                console.log("pasar a ambar");
                 $(btnIz_peatones_Iz_Ar1).children('img').attr("src", img_PeatonRojoVert);
                 cont_iz_Ar1.css({ opacity: 0 });
                 break;
@@ -144,9 +139,7 @@ $(document).ready(function () {
 
     btnIz_peatones_Iz_Ab1.on("click", function () {
 
-        console.log("Boton Peatones ARRIBA IZ PRESIONADO");
         if (btnPresionado2) {
-            console.log("no puedes presionar lo siento");
             return;
         }
 
@@ -161,7 +154,6 @@ $(document).ready(function () {
     function iniciarContador2() {
 
         tiempoGen2++;
-        console.log(tiempoGen);
         contadorPeaton2--;
         cont_iz_Ab1.text(contadorPeaton2);
 
@@ -176,13 +168,11 @@ $(document).ready(function () {
 
                 cont_iz_Ab1.text(cont_peatonesRojo2);
                 contadorPeaton2 = cont_peatonesRojo2; //8
-                console.log('pasar a rojo');
                 $(btnIz_peatones_Iz_Ab1).children('img').attr("src", img_PeatonVerdeVert2);
                 break;
 
             case tiempoGen2 == cont_peatonesRojo2 + cont_peatonesVerde2:
 
-                console.log("pasar a ambar");
                 $(btnIz_peatones_Iz_Ab1).children('img').attr("src", img_PeatonRojoVert2);
                 cont_iz_Ab1.css({ opacity: 0 });
                 break;
