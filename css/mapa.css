@@ -6,111 +6,111 @@
 }
 
 #carretera1 {
-    width: 2.5%;
+    width: 3%;
     position: absolute;
     rotate: 90deg;
-    margin-top: 47.7vh;
-    margin-left: 18.5vh;
+    margin-top: 47vh;
+    margin-left: 17vh;
 }
 
 #carretera2 {
-    width: 2.5%;
+    width: 3%;
     position: absolute;
     rotate: 90deg;
-    margin-top: 47.7vh;
+    margin-top: 47vh;
     margin-left: 133vh;
 }
 
 #carretera3 {
-    width: 2.5%;
+    width: 3%;
     position: absolute;
     margin-top: 72vh;
-    margin-left: 172.5vh;
-}
-
-#carretera4 {
-    width: 2.5%;
-    position: absolute;
-    margin-top: 72vh;
-    margin-left: 57.5vh;
-}
-
-#carretera5 {
-    width: 2.5%;
-    position: absolute;
-    rotate: 180deg;
-    margin-top: 15.5vh;
-    margin-left: 46vh;
-}
-
-#carretera6 {
-    width: 2.5%;
-    position: absolute;
-    rotate: 180deg;
-    margin-top: 15.5vh;
-    margin-left: 161vh;
-}
-
-#carretera7 {
-    width: 2.5%;
-    position: absolute;
-    rotate: 180deg;
-    margin-top: 15.5vh;
     margin-left: 172vh;
 }
 
-#carretera8 {
-    width: 2.5%;
+#carretera4 {
+    width: 3%;
+    position: absolute;
+    margin-top: 72vh;
+    margin-left: 57vh;
+}
+
+#carretera5 {
+    width: 3%;
     position: absolute;
     rotate: 180deg;
-    margin-top: 15.5vh;
-    margin-left: 57.5vh;
+    margin-top: 13.5vh;
+    margin-left: 45.5vh;
+}
+
+#carretera6 {
+    width: 3%;
+    position: absolute;
+    rotate: 180deg;
+    margin-top: 13.5vh;
+    margin-left: 160vh;
+}
+
+#carretera7 {
+    width: 3%;
+    position: absolute;
+    rotate: 180deg;
+    margin-top: 13.5vh;
+    margin-left: 171.5vh;
+}
+
+#carretera8 {
+    width: 3%;
+    position: absolute;
+    rotate: 180deg;
+    margin-top: 13.5vh;
+    margin-left: 56.5vh;
 }
 
 #carretera9 {
-    width: 2.5%;
+    width: 3%;
     position: absolute;
     rotate: 90deg;
-    margin-top: 47.7vh;
-    margin-left: 212vh;
+    margin-top: 47vh;
+    margin-left: 211vh;
 }
 
 #carretera10 {
-    width: 2.5%;
+    width: 3%;
     position: absolute;
     rotate: 270deg;
-    margin-top: 38.7vh;
+    margin-top: 37.5vh;
     margin-left: 202vh;
 }
 
 #carretera11 {
-    width: 2.5%;
+    width: 3%;
     position: absolute;
     rotate: 270deg;
-    margin-top: 38.7vh;
+    margin-top: 37.5vh;
     margin-left: 86vh;
 }
 
 #carretera12 {
-    width: 2.5%;
+    width: 3%;
     position: absolute;
     rotate: 270deg;
-    margin-top: 38.7vh;
+    margin-top: 37.5vh;
     margin-left: 5vh;
 }
 
 #carretera13 {
-    width: 2.5%;
+    width: 3%;
     position: absolute;
     margin-top: 72vh;
-    margin-left: 46.5vh;
+    margin-left: 46vh;
 }
 
 #carretera14 {
-    width: 2.5%;
+    width: 3%;
     position: absolute;
     margin-top: 72vh;
-    margin-left: 161vh;
+    margin-left: 160.5vh;
 }
 
 
@@ -139,7 +139,7 @@
 }
 
 .Contador-Peatones-Iz-2 button {
-    margin: 13px;
+    margin: 12.5px;
     background: none;
     border-color: transparent;
 }
@@ -188,7 +188,7 @@
 .Contador-Peatones-Iz-Ar-1 {
     position: fixed;
     display: flex;
-    margin: 22.5vh 16.7vw;
+    margin: 23vh 16.7vw;
 }
 
 .Contador-Peatones-Iz-Ar-1 button {
@@ -207,7 +207,7 @@
 .Contador-Peatones-Iz-Ar-2 {
     position: fixed;
     display: flex;
-    margin: 22.5vh 67.68vw;
+    margin: 23vh 67.68vw;
 }
 
 .Contador-Peatones-Iz-Ar-2 button {
